@@ -45,7 +45,7 @@ if ( isset ($_POST['create_user']) ) {
     }
 
     if (count($errors) == 0) {
-        $password = $password_confirm;
+        $password = md5($password_confirm);
 
         $add_user = $connection->prepare("INSERT INTO users (fname, lname, username, email, password, date) VALUES (?, ?, ?, ?, ?, NOW())");
         $add_user->bind_param("sssss", $fname, $lname, $username, $email, $password);

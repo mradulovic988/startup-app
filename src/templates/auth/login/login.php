@@ -6,6 +6,7 @@ if (isset($_POST['login_user'])) {
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
+	$password = md5($password);
 
 	$update_user = $connection->prepare("SELECT * FROM users WHERE username = ?");
 	$update_user->bind_param("s", $username);

@@ -3,16 +3,21 @@
  * All functions which we are using in the application
  */
 
-class Functions {
+class Functions
+{
+
+    public $connection;
 
     // Redirection
-    public function redirect($location) {
+    public function redirect($location)
+    {
         header("Location: " . $location);
         exit();
     }
 
     // Check if the user is logged in
-    public function logout() {
+    public function logout()
+    {
         session_start();
         session_unset();
         session_destroy();
@@ -22,7 +27,8 @@ class Functions {
     }
 
     // Check if it's user logged in
-    public function loggedIn() {
+    public function loggedIn()
+    {
         if (!isset($_SESSION['username']) && $_SESSION['username'] !== '') {
             $this->redirect('login.php');
         }
