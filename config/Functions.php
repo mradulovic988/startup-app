@@ -24,7 +24,7 @@ class Functions {
     // Check if it's user logged in
     public function loggedIn() {
         if (!isset($_SESSION['username']) && $_SESSION['username'] !== '') {
-            redirect('login.php');
+            $this->redirect('login.php');
         }
     }
 }
