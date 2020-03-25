@@ -1,0 +1,42 @@
+<?php
+include 'C:/xampp/htdocs/App/config/db.php';
+
+// Login
+if (isset($_POST['login_user'])) {
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+
+
+	$update_user = $connection->prepare("SELECT * FROM users WHERE username = ?");
+	$update_user->bind_param("s", $username);
+	$update_user->execute();
+
+	$result = $update_user->get_result();
+
+	while ($row = $result->fetch_assoc()) {
+		$db_username    = $row['username'];
+		$db_password    = $row['password'];
+		$db_firstname   = $row['fname'];
+		$db_lastname    = $row['lname'];
+        $db_email       = $row['lname'];
+        $db_date        = $row['date'];
+	}
+
+	if ($username !== $db_username && $password !== $db_password) {
+	    redirect('login.php');
+	} elseif ($username == $db_username && $password == $db_password) {
+
+		$_SESSION['username']   = $db_username;
+		$_SESSION['password']   = $db_password;
+		$_SESSION['fname']      = $db_firstname;
+		$_SESSION['lname']      = $db_lastname;
+		$_SESSION['email']      = $db_email;
+		$_SESSION['date']       = $db_date;
+
+		redirect('../../../public/index.php');
+	} else {
+	    redirect('login.php');
+	}
+
+	$update_user->close();
+}

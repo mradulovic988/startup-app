@@ -1,0 +1,30 @@
+@author: Marko Radulovic
+@version: 1.0.0
+@link: [M Lab Studio](https://mlab-studio.com)
+
+# Changelog
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.0.0] - 03.25.2020
+### Added
+- Front end dashboard
+- Login system
+- Session
+- User name and date in dashboard
+- Function redirect() for all redirection
+- Refactored files
+- Started documentation
+- logout function created and implemented
+- Restrication area added
+
+### Changed
+- tables.php page refactored
+- tables.php refactored
+- charts.php refactored
+- layout-sidenav-light.php refactored
+
+### Removed
+-
