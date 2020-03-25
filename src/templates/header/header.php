@@ -1,9 +1,9 @@
 <?php ob_start(); ?>
 <?php session_start(); ?>
-<?php include 'C:/xampp/htdocs/App/config/functions.php'; ?>
+<?php include 'C:/xampp/htdocs/App/config/Functions.php'; ?>
 <?php include 'C:/xampp/htdocs/App/config/db.php'; ?>
 
-<?php loggedIn(); ?>
+<?php $function->loggedIn(); ?>
 
 <!DOCTYPE html>
 <html lang="en">

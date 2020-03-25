@@ -1,3 +1,3 @@
 <?php
-include 'C:/xampp/htdocs/App/config/functions.php';
-logout(); // delete all session
+include 'C:/xampp/htdocs/App/config/Functions.php';
+$function->logout(); // delete all session

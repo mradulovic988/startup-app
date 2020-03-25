@@ -23,7 +23,7 @@ if (isset($_POST['login_user'])) {
 	}
 
 	if ($username !== $db_username && $password !== $db_password) {
-	    redirect('login.php');
+	    $function->redirect('login.php');
 	} elseif ($username == $db_username && $password == $db_password) {
 
 		$_SESSION['username']   = $db_username;
@@ -33,9 +33,9 @@ if (isset($_POST['login_user'])) {
 		$_SESSION['email']      = $db_email;
 		$_SESSION['date']       = $db_date;
 
-		redirect('../../../public/index.php');
+		$function->redirect('../../../public/index.php');
 	} else {
-	    redirect('login.php');
+	    $function->redirect('login.php');
 	}
 
 	$update_user->close();
