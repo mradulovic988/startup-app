@@ -20,6 +20,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - logout function created and implemented
 - Restrication area added
 - Password hashing fixed
+- Added Setting page
+- Added profile, account and security information on User profile
+- Delete account done
 
 ### Changed
 - tables.php page refactored

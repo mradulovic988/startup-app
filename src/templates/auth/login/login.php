@@ -15,6 +15,7 @@ if (isset($_POST['login_user'])) {
 	$result = $update_user->get_result();
 
 	while ($row = $result->fetch_assoc()) {
+	    $db_id          = $row['id'];
 		$db_username    = $row['username'];
 		$db_password    = $row['password'];
 		$db_firstname   = $row['fname'];
@@ -27,6 +28,7 @@ if (isset($_POST['login_user'])) {
 	    $function->redirect('login.php');
 	} elseif ($username == $db_username && $password == $db_password) {
 
+		$_SESSION['id']         = $db_id;
 		$_SESSION['username']   = $db_username;
 		$_SESSION['password']   = $db_password;
 		$_SESSION['fname']      = $db_firstname;
