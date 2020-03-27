@@ -46,15 +46,15 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" enctype="multipart/form-data">
+                        <form method="post" id="profileInformation" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="firstName">First Name</label>
-                                <input type="text" class="form-control" name="fname" id="firstName" placeholder="<?php echo $_SESSION['fname']; ?>">
+                                <input type="text" class="form-control" name="fname" id="firstName" placeholder="<?php echo $_SESSION['fname']; ?>" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="lastName">Last Name</label>
-                                <input type="text" class="form-control" name="lname" id="lastName" placeholder="<?php echo $_SESSION['lname']; ?>">
+                                <input type="text" class="form-control" name="lname" id="lastName" placeholder="<?php echo $_SESSION['lname']; ?>" required>
                             </div>
 
                             <div class="form-group">
@@ -64,12 +64,12 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email</label>
-                                <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="<?php echo $_SESSION['email']; ?>">
+                                <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="<?php echo $_SESSION['email']; ?>" required>
                             </div>
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" name="editProfile" class="btn btn-primary">Save changes</button>
+                                <button type="submit" name="editProfile" id="editProfile" class="btn btn-primary">Save changes</button>
                             </div>
 
                         </form>

@@ -2,7 +2,6 @@
 <?php session_start(); ?>
 <?php include 'C:/xampp/htdocs/App/backend/config/Functions.php'; ?>
 <?php include 'C:/xampp/htdocs/App/backend/config/Db.php'; ?>
-<script src="../../js/main.js"></script>
 
 <?php $function->loggedIn(); ?>
 
