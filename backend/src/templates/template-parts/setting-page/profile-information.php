@@ -5,9 +5,8 @@
         <?php
 
         // Select all data from the database regarding user profile
-        $id_session = $_SESSION['id'];
         $settings = $connection->prepare("SELECT * FROM users WHERE id = ?");
-        $settings->bind_param("i", $id_session);
+        $settings->bind_param("i", $_SESSION['id']);
         $settings->execute();
 
         $result = $settings->get_result();
@@ -25,19 +24,19 @@
 
         // Update data regarding user profile
         if (isset($_POST['editProfile'])) {
-            $fname = $_POST['fname'];
-            $lname = $_POST['lname'];
-            $email = $_POST['email'];
+            $fname  = $_POST['fname'];
+            $lname  = $_POST['lname'];
+            $email  = $_POST['email'];
 
-            $profileEdit = $connection->prepare("UPDATE users SET fname = ?, lname = ?, email = ?  WHERE id = ?");
+            $profileEdit = $connection->prepare("UPDATE users SET fname = ?, lname = ?, email = ? WHERE id = ?");
             $profileEdit->bind_param("sssi", $fname, $lname, $email, $_SESSION['id']);
             $profileEdit->execute();
             $profileEdit->close();
         }
         ?>
-        <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#exampleModalCenter">Edit Information</button>
+        <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#profileInformation">Edit Information</button>
 
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="profileInformation" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">

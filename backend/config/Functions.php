@@ -33,6 +33,15 @@ class Functions
             $this->redirect('login.php');
         }
     }
+
+    // Password generator
+
+    public function password_generate($chars)
+    {
+        $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz!@#$%^&*()_+';
+        return substr(str_shuffle($data), 0, $chars);
+    }
+
 }
 
 $function = new Functions();
