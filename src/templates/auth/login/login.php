@@ -1,5 +1,5 @@
 <?php
-include 'C:/xampp/htdocs/App/config/db.php';
+// include 'C:/xampp/htdocs/App/config/Db.php';
 
 // Login
 if (isset($_POST['login_user'])) {

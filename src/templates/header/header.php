@@ -1,7 +1,7 @@
 <?php ob_start(); ?>
 <?php session_start(); ?>
 <?php include 'C:/xampp/htdocs/App/config/Functions.php'; ?>
-<?php include 'C:/xampp/htdocs/App/config/db.php'; ?>
+<?php include 'C:/xampp/htdocs/App/config/Db.php'; ?>
 
 <?php $function->loggedIn(); ?>
 
