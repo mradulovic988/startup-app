@@ -18,7 +18,7 @@ if (isset($_POST['delete_account'])) {
     $delete_account->bind_param("i", $_SESSION['id']);
     $delete_account->execute();
 
-    $function->redirect('http://appdev/public/login.php');
+    $function->redirect('http://appdev/frontend/index.php');
 
     $delete_account->close();
 }

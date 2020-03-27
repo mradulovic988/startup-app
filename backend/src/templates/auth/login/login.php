@@ -19,7 +19,7 @@ if (isset($_POST['login_user'])) {
 		$db_password    = $row['password'];
 		$db_firstname   = $row['fname'];
 		$db_lastname    = $row['lname'];
-        $db_email       = $row['lname'];
+        $db_email       = $row['email'];
         $db_date        = $row['date'];
 	}
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Webpixels">
-    <title>Quick – Website UI Kit (FREE)</title>
+    <title>App</title>
     <!-- Preloader -->
     <style>
         @keyframes hidePreloader {
@@ -116,7 +116,7 @@
                 <a class="navbar-btn btn btn-sm btn-primary d-none d-lg-inline-block ml-3" href="../backend/public/login.php">
                     Login
                 </a>
-                <a class="navbar-btn btn btn-sm btn-warning d-none d-lg-inline-block" href="https://webpixels.io/themes/quick-website-ui-kit" target="_blank">
+                <a class="navbar-btn btn btn-sm btn-warning d-none d-lg-inline-block" href="http://appdev/backend/public/register.php">
                     Go PRO
                 </a>
                 <!-- Mobile button -->
