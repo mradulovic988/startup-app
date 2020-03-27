@@ -5,12 +5,12 @@
     <meta http-equiv="refresh" content="0;url=public/index.php">
     <title>SB Admin</title>
     <script language="javascript">
-        window.location.href = "public/index.php"
+        window.location.href = "backend/public/index.php"
     </script>
 </head>
 
 <body>
-    Go to <a href="public/index.php">/public/index.php</a>
+    Go to <a href="backend/public/index.php">/public/index.php</a>
 </body>
 
 </html>

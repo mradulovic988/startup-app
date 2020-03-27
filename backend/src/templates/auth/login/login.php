@@ -1,5 +1,4 @@
 <?php
-// include 'C:/xampp/htdocs/App/config/Db.php';
 
 // Login
 if (isset($_POST['login_user'])) {
@@ -36,7 +35,7 @@ if (isset($_POST['login_user'])) {
 		$_SESSION['email']      = $db_email;
 		$_SESSION['date']       = $db_date;
 
-		$function->redirect('../../../public/index.php');
+		$function->redirect('../../../backend/public/index.php');
 	} else {
 	    $function->redirect('login.php');
 	}

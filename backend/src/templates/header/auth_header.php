@@ -1,8 +1,8 @@
 <?php
 ob_start();
 session_start();
-include 'C:/xampp/htdocs/App/config/Db.php';
-include 'C:/xampp/htdocs/App/config/Functions.php';
+include 'C:/xampp/htdocs/App/backend/config/Db.php';
+include 'C:/xampp/htdocs/App/backend/config/Functions.php';
 ?>
 
 <!DOCTYPE html>

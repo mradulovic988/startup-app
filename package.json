@@ -4,13 +4,13 @@
     "version": "6.0.0",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
-        "build:assets": "node scripts/build-assets.js",
-        "build:pug": "node scripts/build-pug.js",
-        "build:scripts": "node scripts/build-scripts.js",
-        "build:scss": "node scripts/build-scss.js",
-        "clean": "node scripts/clean.js",
-        "start": "npm run build && node scripts/start.js",
-        "start:debug": "npm run build && node scripts/start-debug.js"
+        "build:assets": "node backend/scripts/build-assets.js",
+        "build:pug": "node backend/scripts/build-pug.js",
+        "build:scripts": "node backend/scripts/build-scripts.js",
+        "build:scss": "node backend/scripts/build-scss.js",
+        "clean": "node backend/scripts/clean.js",
+        "start": "npm run build && node backend/scripts/start.js",
+        "start:debug": "npm run build && node backend/scripts/start-debug.js"
     },
     "description": "A free admin dashboard template based on Bootstrap 4, created by Start Bootstrap.",
     "keywords": [

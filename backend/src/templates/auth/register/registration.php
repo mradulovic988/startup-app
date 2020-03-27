@@ -7,7 +7,7 @@
  *
  */
 
-include 'C:/xampp/htdocs/App/config/Db.php';
+include 'C:/xampp/htdocs/App/backend/config/Db.php';
 
 $username = "";
 $email    = "";

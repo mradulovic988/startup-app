@@ -22,7 +22,7 @@ class Functions
         session_unset();
         session_destroy();
 
-        $this->redirect('http://appdev/public/login.php');
+        $this->redirect('http://appdev/backend/public/login.php');
         exit;
     }
 

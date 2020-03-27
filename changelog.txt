@@ -31,4 +31,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - layout-sidenav-light.php refactored
 
 ### Removed
+- Refactored backend
+
+## [1.0.0] - 03.25.2020
+### Added
+-
+
+### Changed
+
+### Removed
 -
