@@ -56,7 +56,7 @@ module.exports = function(hljs) {
         '.nolist ' +
         '__FILE__ __LINE__ __SECT__  __BITS__ __OUTPUT_FORMAT__ __DATE__ __TIME__ __DATE_NUM__ __TIME_NUM__ ' +
         '__UTC_DATE__ __UTC_TIME__ __UTC_DATE_NUM__ __UTC_TIME_NUM__  __PASS__ struc endstruc istruc at iend ' +
-        'align alignb sectalign daz nodaz up down zero default option assume public ' +
+        'align alignb sectalign daz nodaz up down zero default option assume pages ' +
 
         'bits use16 use32 use64 default section segment absolute extern global common cpu float ' +
         '__utf16__ __utf16le__ __utf16be__ __utf32__ __utf32le__ __utf32be__ ' +

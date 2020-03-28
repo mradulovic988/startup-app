@@ -6,7 +6,7 @@ module.exports = function(hljs) {
     'builtin-name':
       'case-lambda call/cc class define-class exit-handler field import ' +
       'inherit init-field interface let*-values let-values let/ec mixin ' +
-      'opt-lambda override protect provide public rename require ' +
+      'opt-lambda override protect provide pages rename require ' +
       'require-for-syntax syntax syntax-case syntax-error unit/sig unless ' +
       'when with-syntax and begin call-with-current-continuation ' +
       'call-with-input-file call-with-output-file case cond define ' +

@@ -5,7 +5,7 @@ module.exports = function(hljs) {
       'abstract as base bool break byte case catch char checked const continue decimal ' +
       'default delegate do double enum event explicit extern finally fixed float ' +
       'for foreach goto if implicit in int interface internal is lock long ' +
-      'object operator out override params private protected public readonly ref sbyte ' +
+      'object operator out override params private protected pages readonly ref sbyte ' +
       'sealed short sizeof stackalloc static string struct switch this try typeof ' +
       'uint ulong unchecked unsafe ushort using virtual void volatile while ' +
       // Contextual keywords.

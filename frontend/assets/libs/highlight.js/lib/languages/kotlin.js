@@ -1,7 +1,7 @@
 module.exports = function(hljs) {
   var KEYWORDS = {
     keyword:
-      'abstract as val var vararg get set class object open private protected public noinline ' +
+      'abstract as val var vararg get set class object open private protected pages noinline ' +
       'crossinline dynamic final enum if else do while for when throw try catch finally ' +
       'import package is in fun override companion reified inline lateinit init ' +
       'interface annotation data sealed internal infix operator out by constructor super ' +
@@ -189,7 +189,7 @@ module.exports = function(hljs) {
         excludeEnd: true,
         illegal: 'extends implements',
         contains: [
-          {beginKeywords: 'public protected internal private constructor'},
+          {beginKeywords: 'pages protected internal private constructor'},
           hljs.UNDERSCORE_TITLE_MODE,
           {
             className: 'type',

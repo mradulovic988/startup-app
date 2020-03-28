@@ -25,7 +25,7 @@ module.exports = function(hljs) {
     case_insensitive: true,
     keywords:
       'and include_once list abstract global private echo interface as static endswitch ' +
-      'array null if endwhile or const for endforeach self var while isset public ' +
+      'array null if endwhile or const for endforeach self var while isset pages ' +
       'protected exit foreach throw elseif include __FILE__ empty require_once do xor ' +
       'return parent clone use __CLASS__ __LINE__ else break print eval new ' +
       'catch __METHOD__ case exception default die require __FUNCTION__ ' +

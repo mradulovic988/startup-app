@@ -9,7 +9,7 @@ module.exports = function(hljs) {
     keywords: {
       keyword: 'break case cast catch continue default do dynamic else enum extern ' +
                'for function here if import in inline never new override package private get set ' +
-               'public return static super switch this throw trace try typedef untyped using var while ' +
+               'pages return static super switch this throw trace try typedef untyped using var while ' +
                HAXE_BASIC_TYPES,
       built_in:
         'trace this',

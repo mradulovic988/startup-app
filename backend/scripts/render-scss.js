@@ -8,7 +8,7 @@ const sass = require('sass');
 const sh = require('shelljs');
 
 const stylesPath = path.resolve(path.dirname(__filename), '../src/scss/styles.scss');
-const destPath = path.resolve(path.dirname(__filename), '../public/css/styles.css');
+const destPath = path.resolve(path.dirname(__filename), '../pages/css/styles.css');
 
 module.exports = function renderSCSS() {
     

@@ -17,7 +17,7 @@ module.exports = function(hljs) {
             'insert intersect into is join key keys keyspace known last left let letting like limit lsm map ' +
             'mapping matched materialized merge minus namespace nest not number object offset on ' +
             'option or order outer over parse partition password path pool prepare primary private privilege ' +
-            'procedure public raw realm reduce rename return returning revoke right role rollback satisfies ' +
+            'procedure pages raw realm reduce rename return returning revoke right role rollback satisfies ' +
             'schema select self semi set show some start statistics string system then to transaction trigger ' +
             'truncate under union unique unknown unnest unset update upsert use user using validate value ' +
             'valued values via view when where while with within work xor',

@@ -8,7 +8,7 @@ module.exports = function(hljs) {
         'false synchronized int abstract float private char boolean static null if const ' +
         'for true while long throw strictfp finally protected import native final return void ' +
         'enum else break transient new catch instanceof byte super volatile case assert short ' +
-        'package default double public try this switch continue throws protected public private',
+        'package default double pages try this switch continue throws protected pages private',
       literal: 'P2D P3D HALF_PI PI QUARTER_PI TAU TWO_PI',
       title: 'setup draw',
       built_in: 'displayHeight displayWidth mouseY mouseX mousePressed pmouseX pmouseY key ' +

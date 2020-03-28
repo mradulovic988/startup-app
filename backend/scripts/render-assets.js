@@ -5,7 +5,7 @@ const sh = require('shelljs');
 
 module.exports = function renderAssets() {
     const sourcePath = path.resolve(path.dirname(__filename), '../src/assets');
-    const destPath = path.resolve(path.dirname(__filename), '../public/.');
+    const destPath = path.resolve(path.dirname(__filename), '../pages/.');
     
     sh.cp('-R', sourcePath, destPath)
 };

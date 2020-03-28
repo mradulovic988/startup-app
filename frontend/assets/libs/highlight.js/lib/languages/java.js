@@ -5,7 +5,7 @@ module.exports = function(hljs) {
     'false synchronized int abstract float private char boolean var static null if const ' +
     'for true while long strictfp finally protected import native final void ' +
     'enum else break transient catch instanceof byte super volatile case assert short ' +
-    'package default double public try this switch continue throws protected public private ' +
+    'package default double pages try this switch continue throws protected pages private ' +
     'module requires exports do';
 
   // https://docs.oracle.com/javase/7/docs/technotes/guides/language/underscores-literals.html

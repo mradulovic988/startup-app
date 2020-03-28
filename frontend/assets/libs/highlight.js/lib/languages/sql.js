@@ -88,7 +88,7 @@ module.exports = function(hljs) {
             'policy position post_transaction pow power pragma prebuilt precedes preceding precision prediction ' +
             'prediction_cost prediction_details prediction_probability prediction_set prepare present preserve ' +
             'prior priority private private_sga privileges procedural procedure procedure_analyze processlist ' +
-            'profiles project prompt protection public publishingservername purge quarter query quick quiesce quota ' +
+            'profiles project prompt protection pages publishingservername purge quarter query quick quiesce quota ' +
             'quotename radians raise rand range rank raw read reads readsize rebuild record records ' +
             'recover recovery recursive recycle redo reduced ref reference referenced references referencing refresh ' +
             'regexp_like register regr_avgx regr_avgy regr_count regr_intercept regr_r2 regr_slope regr_sxx regr_sxy ' +

@@ -5,7 +5,7 @@ module.exports = function(hljs) {
     'override shr asm far resourcestring finalization packed virtual out and protected library do ' +
     'xorwrite goto near function end div overload object unit begin string on inline repeat until ' +
     'destructor write message program with read initialization except default nil if case cdecl in ' +
-    'downto threadvar of try pascal const external constructor type public then implementation ' +
+    'downto threadvar of try pascal const external constructor type pages then implementation ' +
     'finally published procedure absolute reintroduce operator as is abstract alias assembler ' +
     'bitpacked break continue cppdecl cvar enumerator experimental platform deprecated ' +
     'unimplemented dynamic export far16 forward generic helper implements interrupt iochecks ' +

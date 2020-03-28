@@ -7,7 +7,7 @@ module.exports = function(hljs) {
         'dynamic dynamicType else enum extension fallthrough false fileprivate final for func ' +
         'get guard if import in indirect infix init inout internal is lazy left let ' +
         'mutating nil none nonmutating open operator optional override postfix precedence ' +
-        'prefix private protocol Protocol public repeat required rethrows return ' +
+        'prefix private protocol Protocol pages repeat required rethrows return ' +
         'right self Self set static struct subscript super switch throw throws true ' +
         'try try! try? Type typealias unowned var weak where while willSet',
       literal: 'true false nil',

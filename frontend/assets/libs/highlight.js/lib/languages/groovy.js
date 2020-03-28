@@ -7,7 +7,7 @@ module.exports = function(hljs) {
             // groovy specific keywords
             'def as in assert trait ' +
             // common keywords with Java
-            'super this abstract static volatile transient public private protected synchronized final ' +
+            'super this abstract static volatile transient pages private protected synchronized final ' +
             'class interface enum if else for while switch case break default continue ' +
             'throw throws try catch finally implements extends new import package return instanceof'
         },

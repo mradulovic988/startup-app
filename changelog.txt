@@ -52,6 +52,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Logged in from side navigation changed to "Welcome back"
 - Button size changed
+- Changed path /public to /pages
 
 ### Removed
 -

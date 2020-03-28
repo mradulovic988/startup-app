@@ -35,7 +35,7 @@ if (isset($_POST['login_user'])) {
 		$_SESSION['email']      = $db_email;
 		$_SESSION['date']       = $db_date;
 
-		$function->redirect('../../../backend/public/index.php');
+		$function->redirect('../../../backend/pages/index.php');
 	} else {
 	    $function->redirect('login.php');
 	}

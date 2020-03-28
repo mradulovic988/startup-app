@@ -14,7 +14,7 @@ module.exports = function(hljs) {
       keyword: 'as break case catch class const continue default delete do dynamic each ' +
         'else extends final finally for function get if implements import in include ' +
         'instanceof interface internal is namespace native new override package private ' +
-        'protected public return set static super switch this throw try typeof use var void ' +
+        'protected pages return set static super switch this throw try typeof use var void ' +
         'while with',
       literal: 'true false null undefined'
     },

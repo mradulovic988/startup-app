@@ -113,10 +113,10 @@
                     </li>
                 </ul>
                 <!-- Button -->
-                <a class="navbar-btn btn btn-sm btn-primary d-none d-lg-inline-block ml-3" href="../backend/public/login.php">
+                <a class="navbar-btn btn btn-sm btn-primary d-none d-lg-inline-block ml-3" href="../backend/pages/login.php">
                     Login
                 </a>
-                <a class="navbar-btn btn btn-sm btn-warning d-none d-lg-inline-block" href="http://appdev/backend/public/register.php">
+                <a class="navbar-btn btn btn-sm btn-warning d-none d-lg-inline-block" href="http://appdev/backend/pages/register.php">
                     Go PRO
                 </a>
                 <!-- Mobile button -->
