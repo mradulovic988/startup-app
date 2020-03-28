@@ -14,7 +14,7 @@ if (isset($_POST['deleteAccount'])) {
 <div class="card-header"><i class="fas fa-table mr-1"></i>Account Information</div>
 <div class="card-body">
     <div class="table-responsive">
-        <button type="button" class="btn btn-danger mt-2" name="genPass" data-toggle="modal" data-target="#accountInformation">Delete Account</button>
+        <button type="button" class="btn btn-danger btn-sm mt-2" name="genPass" data-toggle="modal" data-target="#accountInformation">Delete Account</button>
     </div>
 </div>
 
@@ -30,8 +30,8 @@ if (isset($_POST['deleteAccount'])) {
             <div class="modal-body">
                 <form method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back</button>
-                        <button type="submit" id="updatePass" name="deleteAccount" class="btn btn-danger">Delete</button>
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Back</button>
+                        <button type="submit" id="updatePass" name="deleteAccount" class="btn btn-danger btn-sm">Delete</button>
                     </div>
                 </form>
             </div>

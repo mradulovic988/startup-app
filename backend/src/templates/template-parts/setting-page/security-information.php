@@ -11,11 +11,10 @@ if (isset($_POST['editSecurity'])) {
 
 }
 ?>
-
 <div class="card-header"><i class="fas fa-table mr-1"></i>Security Information</div>
 <div class="card-body">
     <div class="table-responsive">
-        <button type="button" class="btn btn-primary mt-2" name="genPass" data-toggle="modal" data-target="#securityInformation">Generate Password</button>
+        <button type="button" class="btn btn-primary btn-sm mt-2" name="genPass" data-toggle="modal" data-target="#securityInformation">Generate Password</button>
     </div>
 
     <div class="modal fade" id="securityInformation" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -35,12 +34,12 @@ if (isset($_POST['editSecurity'])) {
                             <input type="text" class="form-control" id="copyPassword" name="pass" value="<?php echo $function->password_generate(15).'\n'; ?>">
                         </div>
 
-                        <button type="button" class="btn btn-primary mt-2" onclick="copyToClipboard()">Copy your password</button>
+                        <button type="button" class="btn btn-primary btn-sm mt-2" onclick="copyToClipboard()">Copy your password</button>
                         <p id="copied" class="m-2"></p>
 
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" id="updatePass" name="editSecurity" class="btn btn-primary" title="You need to copy your password." disabled>Update password</button>
+                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                            <button type="submit" id="updatePass" name="editSecurity" class="btn btn-primary btn-sm" title="You need to copy your password." disabled>Update password</button>
                         </div>
 
                     </form>
@@ -49,17 +48,18 @@ if (isset($_POST['editSecurity'])) {
         </div>
     </div>
 </div>
-
 <script>
-function copyToClipboard() {
-    let copyPassword = document.getElementById("copyPassword");
-    copyPassword.select();
-    copyPassword.setSelectionRange(0, 99999);
-    document.execCommand("copy");
-    document.getElementById('copied').innerHTML = '<em>Password is copied. You can update your password.</em>';
+    function copyToClipboard() {
+        let copyPassword = document.getElementById("copyPassword");
+        let msg = '<p class="text-info"><em><small>Password is copied. You can update your password.</small></em></p>';
 
-    document.getElementById("updatePass").disabled = false;
-    document.getElementById("updatePass").title = '';
-    document.getElementById("copyPassword").type = 'text';
-}
+        copyPassword.select();
+        copyPassword.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        document.getElementById('copied').innerHTML = msg;
+
+        document.getElementById("updatePass").disabled = false;
+        document.getElementById("updatePass").title = '';
+        document.getElementById("copyPassword").type = 'text';
+    }
 </script>

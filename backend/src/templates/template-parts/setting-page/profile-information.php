@@ -34,7 +34,7 @@
             $profileEdit->close();
         }
         ?>
-        <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#profileInformation">Edit Information</button>
+        <button type="button" class="btn btn-primary btn-sm mt-2" data-toggle="modal" data-target="#profileInformation">Edit Information</button>
 
         <div class="modal fade" id="profileInformation" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -68,8 +68,8 @@
                             </div>
 
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" name="editProfile" id="editProfile" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                                <button type="submit" name="editProfile" id="editProfile" class="btn btn-primary btn-sm">Save changes</button>
                             </div>
 
                         </form>
