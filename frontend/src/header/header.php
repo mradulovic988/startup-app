@@ -133,6 +133,7 @@
                     <a class="navbar-btn btn btn-sm btn-warning d-none d-lg-inline-block" href="http://appdev/backend/src/templates/auth/logout/logout.php">
                         Logout
                 <?php endif; ?>
+
             <!-- Mobile button -->
             <div class="d-lg-none text-center">
                 <a href="https://webpixels.io/themes/quick-website-ui-kit" class="btn btn-block btn-sm btn-warning">See more details</a>

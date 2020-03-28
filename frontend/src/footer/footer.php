@@ -71,7 +71,7 @@
             <div class="row align-items-center justify-content-md-between pb-4">
                 <div class="col-md-6">
                     <div class="copyright text-sm font-weight-bold text-center text-md-left">
-                        &copy; 2020 <a href="https://webpixels.io" class="font-weight-bold" target="_blank">Webpixels</a>. All rights reserved
+                        &copy; 2015 - <?php echo date('Y'); ?> <a href="https://mlab-studio.com" class="font-weight-bold" target="_blank">M Lab Studio</a>. All rights reserved
                     </div>
                 </div>
                 <div class="col-md-6">
