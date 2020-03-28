@@ -22,12 +22,20 @@ if ( isset ($_POST['create_user']) ) {
     $password_confirm = mysqli_real_escape_string($connection, $_POST['password_confirm']);
 
     // Validation
+    if (empty($fname)) { array_push($errors, "First Name is required"); }
+    if (empty($lname)) { array_push($errors, "Last Name is required"); }
     if (empty($username)) { array_push($errors, "Username is required"); }
     if (empty($email)) { array_push($errors, "Email is required"); }
     if (empty($password_confirm)) { array_push($errors, "Password is required"); }
     if ($password != $password_confirm) {
         array_push($errors, "The two passwords do not match");
     }
+
+    $username_lenght = strlen($username);
+    $password_lenght = strlen($password);
+
+    if ($username_lenght < 5) { array_push($errors, "Username needs to have more than 5 characters."); }
+    if ($password_lenght < 8) { array_push($errors, "Password needs to have more than 8 characters."); }
 
     // Check if the username and email are uniq
     $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email' LIMIT 1";
