@@ -51,7 +51,7 @@ if (isset($_POST['editSecurity'])) {
 <script>
     function copyToClipboard() {
         let copyPassword = document.getElementById("copyPassword");
-        let msg = '<p class="text-info m-2"><em><small>Password is copied. You can update your password.</small></em></p>';
+        let msg = '<p class="text-info mt-2"><em><small>Password is copied. You can update your password.</small></em></p>';
 
         copyPassword.select();
         copyPassword.setSelectionRange(0, 99999);
