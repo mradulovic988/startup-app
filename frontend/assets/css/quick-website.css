@@ -27993,4 +27993,22 @@ section
     background-color: #600;
 }
 
+/* Designing scrollbar */
+::-webkit-scrollbar{ width: 7px; }
+::-webkit-scrollbar-thumb { background: var(--rose-gr-bg);border-radius: 30px;}
+:root {
+    --text-color: #0C66FF;
+    --text-light:#0C66FF;
+    --text-dark: #0C66FF;
+    --heading :#0C66FF;
+    --p-rose: #0C66FF;
+    --rose-gr-bg: linear-gradient(180deg, rgba(12,102,255,1) 0%, rgba(12,102,255,1) 35%, rgba(0,212,255,1) 100%);
+    --rose-gr-reverse: linear-gradient(180deg, rgba(12,102,255,1) 0%, rgba(12,102,255,1) 35%, rgba(0,212,255,1) 100%);
+    --p-green: #0C66FF;
+    --p-orange:#0C66FF;
+    --cyan: #0C66FF;
+    --redOne:#0C66FF;
+}
+/* End Designing scrollbar */
+
 /*# sourceMappingURL=quick-website.css.map */

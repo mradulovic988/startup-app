@@ -51,6 +51,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - PHPMailer integrated
 - Email template
 - Sended email after password recovery
+- Check if the user logged in and show that on Frontend
 
 ### Changed
 - Logged in from side navigation changed to "Welcome back"
