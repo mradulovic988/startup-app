@@ -1,4 +1,5 @@
 <?php
+
 if (isset($_POST['recoveryPassword'])) {
 
     // Declaring variables
@@ -28,7 +29,8 @@ if (isset($_POST['recoveryPassword'])) {
 
         $recoverySuccessMsg = '<p class="text-info mt-2"><em>Your password is succesfully changed. Please check your email and follow the instruction.</em></p>';
 
-        mail("$email", "Password Recovery", "Your password is: $recovery", "Password Recovery");
+        include 'forget_password_mail.php';
+        // mail("$email", "Password Recovery", "Your password is: $recovery", "Password Recovery");
 
         $recPassword = md5($recovery);
 

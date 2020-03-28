@@ -4,6 +4,9 @@
         <a class="nav-link" href="../../../../index.php">
             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
             Dashboard</a>
+        <a class="nav-link" href="http://appdev/frontend/index.php" target="_blank">
+            <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+            View Site</a>
         <div class="sb-sidenav-menu-heading">Interface</div>
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
