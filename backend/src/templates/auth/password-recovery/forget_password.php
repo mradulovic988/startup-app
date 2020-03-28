@@ -25,12 +25,8 @@ if (isset($_POST['recoveryPassword'])) {
     } elseif ($username === $db_username && $email === $db_email) {
 
         $recovery = $function->password_generate(15).'\n';
-        echo $recovery; // After setup email cliend - remove this
 
         $recoverySuccessMsg = '<p class="text-info mt-2"><em>Your password is succesfully changed. Please check your email and follow the instruction.</em></p>';
-
-        include 'forget_password_mail.php';
-        // mail("$email", "Password Recovery", "Your password is: $recovery", "Password Recovery");
 
         $recPassword = md5($recovery);
 
@@ -38,6 +34,8 @@ if (isset($_POST['recoveryPassword'])) {
         $updatePassword->bind_param("ss", $recPassword, $username);
         $updatePassword->execute();
         $updatePassword->close();
+
+        include 'forget_password_mail.php'; // Including PHPMailer email template
     } else {
         $error = '<p class="text-danger mt-2"><em>We can\'t find account with those credentials. Please try again.</em></p>';
     }
