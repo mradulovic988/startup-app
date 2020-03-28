@@ -44,7 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 -
 
-## [1.0.0] - 03.26.2020
+## [1.0.0] - 03.28.2020
 ### Added
 - Authentication header and footer on every required file
 - Password recovery
