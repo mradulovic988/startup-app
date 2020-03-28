@@ -27,5 +27,4 @@
             </div>
         </div>
     </main>
-</div>
 <?php include '../src/templates/footer/auth_footer.php'; ?>
