@@ -1,13 +1,9 @@
 <?php
 if (isset($_POST['deleteAccount'])) {
 
-    $delete_account = $connection->prepare("DELETE FROM users WHERE id = ?");
-    $delete_account->bind_param("i", $_SESSION['id']);
-    $delete_account->execute();
+    $delete_account = $db->query('DELETE FROM users WHERE id = ?', $_SESSION['id'])->fetchAll();
 
     $function->redirect('http://appdev/frontend/index.php');
-
-    $delete_account->close();
 }
 ?>
 

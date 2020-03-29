@@ -4,10 +4,7 @@ if (isset($_POST['editSecurity'])) {
 
     $pass = md5($_POST['pass']);
 
-    $editSecurity = $connection->prepare("UPDATE users SET password = ? WHERE id = ?");
-    $editSecurity->bind_param("si", $pass, $_SESSION['id']);
-    $editSecurity->execute();
-    $editSecurity->close();
+    $editSecurity = $db->query('UPDATE users SET password = ? WHERE id = ?', $pass, $_SESSION['id']);
 
 }
 ?>

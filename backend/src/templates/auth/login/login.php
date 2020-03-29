@@ -7,21 +7,17 @@ if (isset($_POST['login_user'])) {
 
 	$password = md5($password);
 
-	$update_user = $connection->prepare("SELECT * FROM users WHERE username = ?");
-	$update_user->bind_param("s", $username);
-	$update_user->execute();
+    $update_users = $db->query('SELECT * FROM users WHERE username = ?', $username)->fetchAll();
 
-	$result = $update_user->get_result();
-
-	while ($row = $result->fetch_assoc()) {
-	    $db_id          = $row['id'];
-		$db_username    = $row['username'];
-		$db_password    = $row['password'];
-		$db_firstname   = $row['fname'];
-		$db_lastname    = $row['lname'];
-        $db_email       = $row['email'];
-        $db_date        = $row['date'];
-	}
+    foreach ($update_users as $update_user) {
+        $db_id          = $update_user['id'];
+        $db_username    = $update_user['username'];
+        $db_password    = $update_user['password'];
+        $db_firstname   = $update_user['fname'];
+        $db_lastname    = $update_user['lname'];
+        $db_email       = $update_user['email'];
+        $db_date        = $update_user['date'];
+    }
 
 	if ($username !== $db_username && $password !== $db_password) {
 	    $function->redirect('login.php');

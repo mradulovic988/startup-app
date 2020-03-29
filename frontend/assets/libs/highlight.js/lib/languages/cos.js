@@ -60,7 +60,7 @@ module.exports = function cos (hljs) {
     //"$zbitxor", "$zincrement", "$znext", "$zorder", "$zprevious", "$zsort",
     //"device", "$ecode", "$estack", "$etrap", "$halt", "$horolog",
     //"$io", "$job", "$key", "$namespace", "$principal", "$quit", "$roles",
-    //"$storage", "$system", "$test", "$this", "$tlevel", "$username",
+    //"$storage", "$system", "$config", "$this", "$tlevel", "$username",
     //"$x", "$y", "$za", "$zb", "$zchild", "$zeof", "$zeos", "$zerror",
     //"$zhorolog", "$zio", "$zjob", "$zmode", "$znspace", "$zparent", "$zpi",
     //"$zpos", "$zreference", "$zstorage", "$ztimestamp", "$ztimezone",

@@ -34,7 +34,7 @@ module.exports = function(hljs) {
         'subdir_depends subdirs use_mangled_mesa utility_source variable_requires write_file ' +
         'qt5_use_modules qt5_use_package qt5_wrap_cpp ' +
         // core keywords
-        'on off true false and or not command policy target test exists is_newer_than ' +
+        'on off true false and or not command policy target config exists is_newer_than ' +
         'is_directory is_symlink is_absolute matches less greater equal less_equal ' +
         'greater_equal strless strgreater strequal strless_equal strgreater_equal version_less ' +
         'version_greater version_equal version_less_equal version_greater_equal in_list defined'

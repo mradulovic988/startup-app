@@ -387,7 +387,7 @@ module.exports = function(hljs) {
           },
           // Sequences. We actually skip everything between CACHE|INCREMENT|MAXVALUE|MINVALUE and
           // nearest following numeric constant. Without with trick we find a lot of "keywords"
-          // in 'avrasm' autodetection test...
+          // in 'avrasm' autodetection config...
           {
             beginKeywords: 'CACHE INCREMENT MAXVALUE MINVALUE',
             end: hljs.C_NUMBER_RE,

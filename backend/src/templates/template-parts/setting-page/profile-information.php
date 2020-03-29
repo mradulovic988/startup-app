@@ -4,23 +4,16 @@
 
         <?php
 
-        // Select all data from the database regarding user profile
-        $settings = $connection->prepare("SELECT * FROM users WHERE id = ?");
-        $settings->bind_param("i", $_SESSION['id']);
-        $settings->execute();
+        $settings = $db->query('SELECT * FROM users WHERE id = ?', $_SESSION['id'])->fetchAll();
 
-        $result = $settings->get_result();
-
-        while ($row = $result->fetch_assoc()) { ?>
-            <p class="mb-0">First Name: <span class="text-muted"><?php echo $row['fname']; ?></span></p>
-            <p class="mb-0">Last Name: <span class="text-muted"><?php echo $row['lname']; ?></span></p>
-            <p class="mb-0">Username: <span class="text-muted"><?php echo $row['username']; ?></span></p>
-            <p class="mb-0">Email: <span class="text-muted"><?php echo $row['email']; ?></span></p>
-            <p class="mb-0">Member since: <span class="text-muted"><?php echo strstr(str_replace('-', '/', $row['date']), ' ', true); ?></span></p>
+        foreach ($settings as $setting) { ?>
+            <p class="mb-0">First Name: <span class="text-muted"><?php echo $setting['fname']; ?></span></p>
+            <p class="mb-0">Last Name: <span class="text-muted"><?php echo $setting['lname']; ?></span></p>
+            <p class="mb-0">Username: <span class="text-muted"><?php echo $setting['username']; ?></span></p>
+            <p class="mb-0">Email: <span class="text-muted"><?php echo $setting['email']; ?></span></p>
+            <p class="mb-0">Member since: <span class="text-muted"><?php echo strstr(str_replace('-', '/', $setting['date']), ' ', true); ?></span></p>
 
         <?php }
-
-        $settings->close();
 
         // Update data regarding user profile
         if (isset($_POST['editProfile'])) {
@@ -28,10 +21,8 @@
             $lname  = $_POST['lname'];
             $email  = $_POST['email'];
 
-            $profileEdit = $connection->prepare("UPDATE users SET fname = ?, lname = ?, email = ? WHERE id = ?");
-            $profileEdit->bind_param("sssi", $fname, $lname, $email, $_SESSION['id']);
-            $profileEdit->execute();
-            $profileEdit->close();
+            $profileEdit = $db->query('UPDATE users SET fname = ?, lname = ?, email = ? WHERE id = ?', $fname, $lname, $email, $_SESSION['id']);
+
         }
         ?>
         <button type="button" class="btn btn-primary btn-sm mt-2" data-toggle="modal" data-target="#profileInformation">Edit Information</button>

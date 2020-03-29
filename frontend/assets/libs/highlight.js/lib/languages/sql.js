@@ -111,7 +111,7 @@ module.exports = function(hljs) {
             'subpartition subpartitions substitutable substr substring subtime subtring_index subtype success sum ' +
             'suspend switch switchoffset switchover sync synchronous synonym sys sys_xmlagg sysasm sysaux sysdate ' +
             'sysdatetimeoffset sysdba sysoper system system_user sysutcdatetime table tables tablespace tablesample tan tdo ' +
-            'template temporary terminated tertiary_weights test than then thread through tier ties time time_format ' +
+            'template temporary terminated tertiary_weights config than then thread through tier ties time time_format ' +
             'time_zone timediff timefromparts timeout timestamp timestampadd timestampdiff timezone_abbr ' +
             'timezone_minute timezone_region to to_base64 to_date to_days to_seconds todatetimeoffset trace tracking ' +
             'transaction transactional translate translation treat trigger trigger_nestlevel triggers trim truncate ' +

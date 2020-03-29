@@ -6,19 +6,13 @@ if (isset($_POST['recoveryPassword'])) {
     $username   = $_POST['username'];
     $email      = $_POST['email'];
 
-    $passwordRecovery = $connection->prepare("SELECT * FROM users WHERE username = ?");
-    $passwordRecovery->bind_param("s", $username);
-    $passwordRecovery->execute();
+    $passwordRecovery = $db->query('SELECT * FROM users WHERE username = ?', $username)->fetchAll();
 
-    $result = $passwordRecovery->get_result();
-
-    while ($row = $result->fetch_assoc()) {
-        $db_username    = $row['username'];
-        $db_password    = $row['password'];
-        $db_email       = $row['email'];
+    foreach ($passwordRecovery as $password) {
+        $db_username    = $password['username'];
+        $db_password    = $password['password'];
+        $db_email       = $password['email'];
     }
-
-    $passwordRecovery->close();
 
     if ($username !== $db_username && $email !== $db_email) {
         $error = '<p class="text-danger mt-2"><em>We can\'t find account with those credentials. Please try again.</em></p>';
@@ -30,10 +24,7 @@ if (isset($_POST['recoveryPassword'])) {
 
         $recPassword = md5($recovery);
 
-        $updatePassword = $connection->prepare("UPDATE users SET password = ? WHERE username = ?");
-        $updatePassword->bind_param("ss", $recPassword, $username);
-        $updatePassword->execute();
-        $updatePassword->close();
+        $recPassword = $db->query('UPDATE users SET password = ? WHERE username = ?', $recPassword, $username);
 
         include 'forget_password_mail.php'; // Including PHPMailer email template
     } else {
