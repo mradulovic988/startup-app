@@ -64,7 +64,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 03.29.2020
 ### Added
--
+- Integrated all frontend parts with sessions
 
 ### Changed
 - Change some design styles
