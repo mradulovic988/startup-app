@@ -159,7 +159,7 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #152c5b;
   text-decoration: none;
   background-color: transparent;
 }
@@ -2042,7 +2042,7 @@ pre code {
   opacity: 1;
 }
 .form-control:disabled, .form-control[readonly] {
-  background-color: #e9ecef;
+  background-color: #eaeefb;
   opacity: 1;
 }
 
@@ -2456,18 +2456,18 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #718096;
+  border-color: #718096;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: #152c5b;
+  border-color: #152c5b;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: #152c5b;
+  border-color: #152c5b;
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
 .btn-primary.disabled, .btn-primary:disabled {
@@ -4379,7 +4379,7 @@ input[type=button].btn-block {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: #FAFBFE;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 .card-header:first-child {
@@ -4539,7 +4539,7 @@ input[type=button].btn-block {
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #e9ecef;
+  background-color: #eaeefb;
   border-radius: 0.25rem;
 }
 
@@ -10156,39 +10156,41 @@ body {
 }
 
 nav.sb-topnav.navbar.navbar-expand {
-  background: #004bcc;
+  background: #eaeefb;
 }
 
 .sb-sidenav-dark {
-  background-color: #0C66FF;
+  background-color: #FAFBFE;
   color: rgba(255, 255, 255, 0.5);
 }
 .sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
-  color: rgba(255, 255, 255, 1);
+  color: #152c5b;
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link {
-  color: rgba(255, 255, 255, 0.9);
+  color: #718096;
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-nav-link-icon {
-  color: rgba(255, 255, 255, 1);
+  color: #152c5b;
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-sidenav-collapse-arrow {
   color: rgba(255, 255, 255, 0.25);
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
-  color: rgba(255, 255, 255, 0.5);
+  color: #152c5b;
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link.active {
-  color: #fff;
+  color: #152c5b;
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link.active .sb-nav-link-icon {
-  color: #fff;
+  color: #152c5b;
 }
 .sb-sidenav-dark .sb-sidenav-footer {
-  background-color: #004bcc;
+  background-color: #eaeefb;
+  height: 67px;
+  color: #152c5b;
 }
-.sb-topnav .navbar-brand { color: #fff; }
-.svg-inline--fa.fa-w-14 { color: #fff; }
+.sb-topnav .navbar-brand { color: #152c5b ; }
+.svg-inline--fa.fa-w-14 { color: #152c5b; }
 .sb-sidenav-light {
   background-color: #f8f9fa;
   color: #212529;

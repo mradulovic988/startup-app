@@ -114,6 +114,23 @@
                 <li class="nav-item ">
                     <a href="contact.php" class="nav-link">Contact</a>
                 </li>
+
+                <?php if (empty($_SESSION['username'])) : ?>
+                    <li class="nav-item d-lg-none">
+                        <a href="../backend/pages/login.php" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a href="../backend/pages/register.php" class="nav-link">Go Pro</a>
+                    </li>
+                <?php else : ?>
+                    <li class="nav-item d-lg-none">
+                        <a href="../backend/pages/index.php" class="nav-link">Profile</a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a href="../backend/src/templates/auth/logout/logout.php" class="nav-link">Logout</a>
+                    </li>
+                <?php endif; ?>
+
             </ul>
             <!-- Button -->
 
@@ -122,15 +139,15 @@
                         Login
                     </a>
 
-                    <a class="navbar-btn btn btn-sm btn-warning d-none d-lg-inline-block" href="http://appdev/backend/pages/register.php">
+                    <a class="navbar-btn btn btn-sm btn-warning d-none d-lg-inline-block" href="../backend/pages/register.php">
                         Go PRO
                     </a>
                 <?php else : ?>
-                    <a class="navbar-btn btn btn-sm btn-primary d-none d-lg-inline-block ml-3" href="../backend/pages/index.php">
+                    <a class="navbar-btn btn btn-sm btn-primary d-lg-inline-block ml-3" href="../backend/pages/index.php">
                         Profile
                     </a>
 
-                    <a class="navbar-btn btn btn-sm btn-warning d-none d-lg-inline-block" href="http://appdev/backend/src/templates/auth/logout/logout.php">
+                    <a class="navbar-btn btn btn-sm btn-warning d-lg-inline-block" href="../backend/src/templates/auth/logout/logout.php">
                         Logout
                 <?php endif; ?>
 
