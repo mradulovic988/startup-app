@@ -10219,3 +10219,7 @@ nav.sb-topnav.navbar.navbar-expand {
 .sb-sidenav-light .sb-sidenav-footer {
   background-color: #e9ecef;
 }
+
+img#navbar-logo {
+  height: 2.5rem;
+}

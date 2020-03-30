@@ -99,7 +99,7 @@
     <div class="container">
         <!-- Brand -->
         <a class="navbar-brand" href="index.php">
-            <img alt="Image placeholder" src="assets/img/brand/dark.svg" id="navbar-logo">
+            <img alt="Image placeholder" src="assets/img/brand/mlab-logo.png" id="navbar-logo">
         </a>
         <!-- Toggler -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -124,7 +124,7 @@
                     </li>
                 <?php else : ?>
                     <li class="nav-item d-lg-none">
-                        <a href="../backend/pages/index.php" class="nav-link">Profile</a>
+                        <a href="../backend/pages/index.php" class="nav-link"><?php echo 'Hi, '.$_SESSION['fname']; ?></a>
                     </li>
                     <li class="nav-item d-lg-none">
                         <a href="../backend/src/templates/auth/logout/logout.php" class="nav-link">Logout</a>
@@ -144,7 +144,7 @@
                     </a>
                 <?php else : ?>
                     <a class="navbar-btn btn btn-sm btn-primary d-lg-inline-block ml-3" href="../backend/pages/index.php">
-                        Profile
+                        <?php echo 'Hi, '.$_SESSION['fname']; ?>
                     </a>
 
                     <a class="navbar-btn btn btn-sm btn-warning d-lg-inline-block" href="../backend/src/templates/auth/logout/logout.php">

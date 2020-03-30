@@ -20,6 +20,9 @@
 
                 <!-- Profile Information -->
                 <div class="card mb-4">
+
+                    <!-- Here comes the code -->
+
                     <?php include '../src/templates/template-parts/setting-page/additional-profile-information.php'; ?>
                 </div>
 
