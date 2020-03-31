@@ -15,6 +15,7 @@
     <meta name="author" content="" />
     <title>App</title>
     <link href="css/styles.css" rel="stylesheet" />
+    <link rel="icon" href="../../../../frontend/assets/img/brand/favicon.png" type="image/png">
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
     <script type="text/javascript" src="../../../pages/js/scripts.js">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
