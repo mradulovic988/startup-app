@@ -9,13 +9,13 @@
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid">
-                <h1 class="mt-4">Profile Information</h1>
+                <h1 class="mt-4"><?php echo Localization::localizationString('profile_information') ?></h1>
                 <ol class="breadcrumb mb-4">
-                    <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                    <li class="breadcrumb-item active">Profile Information</li>
+                    <li class="breadcrumb-item"><a href="index.php"><?php echo Localization::localizationString('dashboard_breadcrumb') ?></a></li>
+                    <li class="breadcrumb-item active"><?php echo Localization::localizationString('profile_information_breadcrumb');?></li>
                 </ol>
                 <div class="card mb-4">
-                    <div class="card-body">Place where you can manage with all your additional profile information.</div>
+                    <div class="card-body"><?php echo Localization::localizationString('info_additional_information') ?></div>
                 </div>
 
                 <!-- Profile Information -->
@@ -45,8 +45,8 @@
                                             </div>
                                         </div>
 
-                                        <h3 class="text-center font-weight-light">Customize your intro</h3>
-                                        <small id="username" class="text-center form-text text-muted mb-5">Details that you select will be public and will be visible to all users.</small>
+                                        <h3 class="text-center font-weight-light"><?php echo Localization::localizationString ( 'customize' ); ?></h3>
+                                        <small id="username" class="text-center form-text text-muted mb-5"><?php echo Localization::localizationString ( 'detail_user' ); ?></small>
 
                                         <div class="form-row">
                                             <div class="col-md-4">

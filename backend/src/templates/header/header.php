@@ -1,6 +1,7 @@
 <?php ob_start(); ?>
 <?php session_start(); ?>
 <?php include 'C:/xampp/htdocs/App/backend/config/Database.php'; ?>
+<?php include 'C:/xampp/htdocs/App/backend/config/Localization.php'; ?>
 <?php include 'C:/xampp/htdocs/App/backend/config/Functions.php'; ?>
 
 <?php $function->loggedIn(); ?>
