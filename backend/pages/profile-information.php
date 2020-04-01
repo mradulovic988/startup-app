@@ -9,13 +9,13 @@
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid">
-                <h1 class="mt-4"><?php echo Localization::localizationString('profile_information') ?></h1>
+                <h1 class="mt-4"><?= Localization::localizationString('profile_information') ?></h1>
                 <ol class="breadcrumb mb-4">
-                    <li class="breadcrumb-item"><a href="index.php"><?php echo Localization::localizationString('dashboard_breadcrumb') ?></a></li>
-                    <li class="breadcrumb-item active"><?php echo Localization::localizationString('profile_information_breadcrumb');?></li>
+                    <li class="breadcrumb-item"><a href="index.php"><?= Localization::localizationString('dashboard_breadcrumb') ?></a></li>
+                    <li class="breadcrumb-item active"><?= Localization::localizationString('profile_information_breadcrumb');?></li>
                 </ol>
                 <div class="card mb-4">
-                    <div class="card-body"><?php echo Localization::localizationString('info_additional_information') ?></div>
+                    <div class="card-body"><?= Localization::localizationString('info_additional_information') ?></div>
                 </div>
 
                 <!-- Profile Information -->
@@ -25,7 +25,7 @@
 
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-lg-10 mb-5">
+                            <div class="col-lg-8 mb-5">
                                 <div class="border-0 rounded-lg mt-5">
                                     <form class="md-form" method="post" enctype="multipart/form-data">
 
@@ -45,8 +45,8 @@
                                             </div>
                                         </div>
 
-                                        <h3 class="text-center font-weight-light"><?php echo Localization::localizationString ( 'customize' ); ?></h3>
-                                        <small id="username" class="text-center form-text text-muted mb-5"><?php echo Localization::localizationString ( 'detail_user' ); ?></small>
+                                        <h3 class="text-center font-weight-light"><?= Localization::localizationString ( 'customize' ); ?></h3>
+                                        <small id="username" class="text-center form-text text-muted mb-5"><?= Localization::localizationString ( 'detail_user' ); ?></small>
 
                                         <div class="form-row">
                                             <div class="col-md-4">
@@ -92,29 +92,28 @@
 
                                             <div class="col-md-4">
                                                 <select class="form-control form-control-lg bottom-border" id="relationshipStatus" name="relationshipStatus">
-                                                    <option disabled selected>Relationship Status</option>
-                                                    <option value="Single">Single</option>
-                                                    <option value="In a Relatioship">In a Relatioship</option>
-                                                    <option value="Engaged">Engaged</option>
-                                                    <option value="Married">Married</option>
-                                                    <option value="In a civil partnership">In a civil partnership</option>
-                                                    <option value="In a civil partnership">In a civil partnership</option>
-                                                    <option value="In a domestic partnership">In a domestic partnership</option>
-                                                    <option value="In a open relationship">In a open relationship</option>
-                                                    <option value="It's complicated">It's complicated</option>
-                                                    <option value="Separated">Separated</option>
-                                                    <option value="Divorced">Divorced</option>
-                                                    <option value="Widowed">Widowed</option>
+                                                    <option disabled selected><?= Localization::localizationString('relationship_status') ?></option>
+                                                    <option value="Single"><?= Localization::localizationString('single'); ?></option>
+                                                    <option value="In a Relatioship"><?= Localization::localizationString('in_relationship'); ?></option>
+                                                    <option value="Engaged"><?= Localization::localizationString('engaded'); ?></option>
+                                                    <option value="Married"><?= Localization::localizationString('married'); ?></option>
+                                                    <option value="In a civil partnership"><?= Localization::localizationString('civil_partnership'); ?></option>
+                                                    <option value="In a domestic partnership"><?= Localization::localizationString('domestic_partnership'); ?></option>
+                                                    <option value="In a open relationship"><?= Localization::localizationString('open_partnership'); ?></option>
+                                                    <option value="It's complicated"><?= Localization::localizationString('complicated'); ?></option>
+                                                    <option value="Separated"><?= Localization::localizationString('separated'); ?></option>
+                                                    <option value="Divorced"><?= Localization::localizationString('divorced'); ?></option>
+                                                    <option value="Widowed"><?= Localization::localizationString('widowed'); ?></option>
                                                 </select>
                                             </div>
 
                                             <div class="col-md-4">
                                                 <select class="form-control form-control-lg bottom-border" id="gender" name="gender">
-                                                    <option disabled selected>Gender</option>
-                                                    <option value="Male">Male</option>
-                                                    <option value="Female">Female</option>
-                                                    <option value="Custom">Custom</option>
-                                                    <option value="Prefer not to say">Prefer not to say</option>
+                                                    <option disabled selected><?= Localization::localizationString('gender'); ?></option>
+                                                    <option value="Male"><?= Localization::localizationString('male'); ?></option>
+                                                    <option value="Female"><?= Localization::localizationString('female'); ?></option>
+                                                    <option value="Custom"><?= Localization::localizationString('custom'); ?></option>
+                                                    <option value="Prefer not to say"><?= Localization::localizationString('not_to_say'); ?></option>
                                                 </select>
                                             </div>
 
