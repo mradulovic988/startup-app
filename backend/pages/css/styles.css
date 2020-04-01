@@ -10324,3 +10324,9 @@ select.form-control.bottom-border {
   text-align: center;
   margin: auto;
 }
+
+textarea.form-control.bottom-border {
+  border: 0;
+  border-bottom: 1px solid;
+  border-radius: 0;
+}

@@ -91,7 +91,7 @@
                                         <div class="form-row">
 
                                             <div class="col-md-4">
-                                                <select class="form-control form-control-lg bottom-border" id="relationshipStatus" name="relationshipStatus">
+                                                <select class="form-control form-control-lg bottom-border" id="relationshipStatus" name="relationshipStatus[]">
                                                     <option disabled selected><?= Localization::localizationString('relationship_status') ?></option>
                                                     <option value="Single"><?= Localization::localizationString('single'); ?></option>
                                                     <option value="In a Relatioship"><?= Localization::localizationString('in_relationship'); ?></option>
@@ -108,7 +108,7 @@
                                             </div>
 
                                             <div class="col-md-4">
-                                                <select class="form-control form-control-lg bottom-border" id="gender" name="gender">
+                                                <select class="form-control form-control-lg bottom-border" id="gender" name="gender[]">
                                                     <option disabled selected><?= Localization::localizationString('gender'); ?></option>
                                                     <option value="Male"><?= Localization::localizationString('male'); ?></option>
                                                     <option value="Female"><?= Localization::localizationString('female'); ?></option>
@@ -119,7 +119,7 @@
 
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <input class="form-control py-4 bottom-border" id="hobbies" type="text" name="hobbies" placeholder="Hobbies" />
+                                                    <input class="form-control py-4 bottom-border" id="hobbies" type="text" name="hobbies[]" placeholder="Hobbies" />
                                                 </div>
                                             </div>
                                         </div>
@@ -147,7 +147,7 @@
                                         <div class="form-row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input class="form-control py-4 bottom-border" id="bio" type="text" name="bio" placeholder="Write something about you" />
+                                                    <textarea class="form-control bottom-border" name="bio" rows="3" placeholder="Write something about you.."></textarea>
                                                 </div>
                                             </div>
                                         </div>

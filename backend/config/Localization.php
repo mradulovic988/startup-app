@@ -45,5 +45,4 @@ class Localization
     );
 
 }
-
 $localization = new Localization();
