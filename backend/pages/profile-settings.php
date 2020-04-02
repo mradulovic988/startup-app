@@ -14,8 +14,14 @@
                     <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
                     <li class="breadcrumb-item active">Settings</li>
                 </ol>
+
                 <div class="card mb-4">
                     <div class="card-body">Place where you can manage with all your profile information.</div>
+                </div>
+
+                <!-- Additional Information -->
+                <div class="card mb-4">
+                    <?php include '../src/templates/template-parts/setting-page/additional-profile-information.php'; ?>
                 </div>
 
                 <!-- Profile Information -->

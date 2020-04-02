@@ -12,6 +12,7 @@ if (isset ($_POST['additionalSubmit'])) {
     $phoneNumber                = mysqli_real_escape_string($db->connection, $_POST['phoneNumber']);
     $state                      = mysqli_real_escape_string($db->connection, $_POST['state']);
     $homeTown                   = mysqli_real_escape_string($db->connection, $_POST['homeTown']);
+    $relationshipStatus         = mysqli_real_escape_string($db->connection, print_r(implode('', $_POST['relationshipStatus']), true));
     $gender                     = mysqli_real_escape_string($db->connection, print_r(implode('', $_POST['gender']), true));
     $hobbies                    = mysqli_real_escape_string($db->connection, print_r(implode('', $_POST['hobbies']), true));
     $website                    = mysqli_real_escape_string($db->connection, $_POST['website']);
@@ -30,6 +31,7 @@ if (isset ($_POST['additionalSubmit'])) {
     if (empty($state)) { array_push($errors, "State field is required"); }
     if (empty($homeTown)) { array_push($errors, "Home Town field is required"); }
     if (empty($gender)) { array_push($errors, "Gender field is required"); }
+    if (empty($relationshipStatus)) { array_push($errors, "Gender field is required"); }
     if (empty($hobbies)) { array_push($errors, "Hobbies field is required"); }
     if (empty($bio)) { array_push($errors, "Biography field is required"); }
 
@@ -37,9 +39,10 @@ if (isset ($_POST['additionalSubmit'])) {
         $uploadFileDir = 'C:/xampp/htdocs/App/backend/src/templates/template-parts/setting-page/uploaded_image/';
         $dest_path = $uploadFileDir . $newFileName;
 
-
         if(move_uploaded_file($fileTmpPath, $dest_path)) {
-            // add code
+            // Add code here
         }
     }
 }
+
+include 'additional-profile-information-form.php';
