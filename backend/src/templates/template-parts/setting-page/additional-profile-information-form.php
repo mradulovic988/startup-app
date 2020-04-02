@@ -83,7 +83,7 @@
 
                                 <div class="col-md-4">
                                     <select class="form-control form-control-lg bottom-border" id="relationshipStatus" name="relationshipStatus[]" required>
-                                        <option disabled selected><?= Localization::localizationString('relationship_status') ?></option>
+                                        <option value=""><?= Localization::localizationString('relationship_status') ?></option>
                                         <option value="Single"><?= Localization::localizationString('single'); ?></option>
                                         <option value="In a Relatioship"><?= Localization::localizationString('in_relationship'); ?></option>
                                         <option value="Engaged"><?= Localization::localizationString('engaded'); ?></option>
@@ -100,7 +100,7 @@
 
                                 <div class="col-md-4">
                                     <select class="form-control form-control-lg bottom-border" id="gender" name="gender[]" required>
-                                        <option disabled selected><?= Localization::localizationString('gender'); ?></option>
+                                        <option value=""><?= Localization::localizationString('gender'); ?></option>
                                         <option value="Male"><?= Localization::localizationString('male'); ?></option>
                                         <option value="Female"><?= Localization::localizationString('female'); ?></option>
                                         <option value="Custom"><?= Localization::localizationString('custom'); ?></option>
@@ -110,7 +110,7 @@
 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <input class="form-control py-4 bottom-border" id="hobbies" type="text" name="hobbies[]" placeholder="Hobbies" required />
+                                        <input class="form-control py-4 bottom-border" id="hobbies" type="text" name="hobbies" placeholder="Hobbies" required />
                                     </div>
                                 </div>
                             </div>

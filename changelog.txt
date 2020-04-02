@@ -115,9 +115,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Deleted Profile information page and transfer inside the template parts
 
 ### Removed
--
-
-### Bugs
 - Notice: Undefined index: relationshipStatus in C:\xampp\htdocs\app\backend\src\templates\template-parts\setting-page\additional-profile-information.php on line 15
 - Warning: implode(): Invalid arguments passed in C:\xampp\htdocs\app\backend\src\templates\template-parts\setting-page\additional-profile-information.php on line 15
+
+### Bugs
 - Warning: array_push() expects parameter 1 to be array, null given in C:\xampp\htdocs\app\backend\src\templates\template-parts\setting-page\additional-profile-information.php on line 33
