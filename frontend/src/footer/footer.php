@@ -12,7 +12,7 @@
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <!-- Theme's logo -->
                     <a href="index.php">
-                        <img alt="Image placeholder" src="assets/img/brand/light.svg" id="footer-logo">
+                        <img alt="Image placeholder" src="assets/img/brand/mlab-logo-white.png" id="footer-logo">
                     </a>
                     <!-- Webpixels' mission -->
                     <p class="mt-4 text-sm opacity-8 pr-lg-4">Webpixels attempts to bring the best development experience to designers and developers by offering the tools needed for having a quick and solid start in most web projects.</p>
