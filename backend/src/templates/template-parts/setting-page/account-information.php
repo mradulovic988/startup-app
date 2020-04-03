@@ -3,7 +3,7 @@ if (isset($_POST['deleteAccount'])) {
 
     $delete_account = $db->query('DELETE FROM users WHERE id = ?', $_SESSION['id'])->fetchAll();
 
-    $function->redirect('http://appdev/frontend/index.php');
+    $function->redirect('http://app.beta/frontend/index.php');
 }
 ?>
 

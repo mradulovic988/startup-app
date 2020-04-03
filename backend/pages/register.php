@@ -39,7 +39,7 @@
                             </form>
                         </div>
                         <div class="card-footer text-center">
-                            <div class="small"><a href="http://appdev/backend/pages/login.php">Have an account? Go to login</a></div>
+                            <div class="small"><a href="http://app.beta/backend/pages/login.php">Have an account? Go to login</a></div>
                         </div>
                     </div>
                 </div>

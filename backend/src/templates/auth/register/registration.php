@@ -58,6 +58,6 @@ if ( isset ($_POST['create_user']) ) {
 
         $add_user->close();
 
-        header('location: http://appdev/backend/pages/login.php');
+        header('location: http://app.beta/backend/pages/login.php');
     }
 }

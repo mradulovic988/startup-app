@@ -22,7 +22,7 @@ class Functions
         session_unset();
         session_destroy();
 
-        $this->redirect('http://appdev/frontend/index.php');
+        $this->redirect('http://app.beta/frontend/index.php');
         exit;
     }
 

@@ -120,3 +120,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Bugs
 - Warning: array_push() expects parameter 1 to be array, null given in C:\xampp\htdocs\app\backend\src\templates\template-parts\setting-page\additional-profile-information.php on line 33
+
+## [1.0.0] - 04.03.2020
+### Added
+-
+
+### Changed
+- Path from http://appdev to http://app.beta
+
+### Removed
+-
+
+### Bugs
+- Warning: array_push() expects parameter 1 to be array, null given in C:\xampp\htdocs\app\backend\src\templates\template-parts\setting-page\additional-profile-information.php on line 33

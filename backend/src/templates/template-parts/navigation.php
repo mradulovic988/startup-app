@@ -4,7 +4,7 @@
         <a class="nav-link" href="index.php">
             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
             Dashboard</a>
-        <a class="nav-link" href="http://appdev/frontend/index.php" target="_blank">
+        <a class="nav-link" href="http://app.beta/frontend/index.php" target="_blank">
             <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
             View Site</a>
         <div class="sb-sidenav-menu-heading">Interface</div>

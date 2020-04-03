@@ -25,23 +25,13 @@ if (isset ($_POST['additionalSubmit'])) {
     $newFileName                = md5(time() . $fileName) . '.' . $fileExtension;
     $allowedfileExtensions      = array('jpg', 'png', 'jpeg');
 
-    // Validation
-//    if (empty($work)) { array_push($errors, "Work field is required"); }
-//    if (empty($education)) { array_push($errors, "Education field is required"); }
-//    if (empty($state)) { array_push($errors, "State field is required"); }
-//    if (empty($homeTown)) { array_push($errors, "Home Town field is required"); }
-//    if (empty($gender)) { array_push($errors, "Gender field is required"); }
-//    if (empty($relationshipStatus)) { array_push($errors, "Gender field is required"); }
-//    if (empty($hobbies)) { array_push($errors, "Hobbies field is required"); }
-//    if (empty($bio)) { array_push($errors, "Biography field is required"); }
-
     if (in_array($fileExtension, $allowedfileExtensions)) {
         $uploadFileDir = 'C:/xampp/htdocs/App/backend/src/templates/template-parts/setting-page/uploaded_image/';
         $dest_path = $uploadFileDir . $newFileName;
 
         if(move_uploaded_file($fileTmpPath, $dest_path)) {
             // Add code here if every condition is good
-            
+
         }
     }
 }
