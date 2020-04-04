@@ -27,6 +27,16 @@
                     <div class="card-body">
                         <div class="table-responsive">
                             Add data here
+                            <?php
+                            // Query for select from users_info table
+                            $session_username = $_SESSION['username'];
+                            $tests = $db->query('SELECT * FROM users INNER JOIN users_info ON users.id=users_info.id WHERE users.username=?', $session_username)->fetchAll();
+
+
+
+
+
+                            ?>
                         </div>
                     </div>
                 </div>

@@ -133,3 +133,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Bugs
 - Warning: array_push() expects parameter 1 to be array, null given in C:\xampp\htdocs\app\backend\src\templates\template-parts\setting-page\additional-profile-information.php on line 33
+
+## [1.0.0] - 04.05.2020
+### Added
+- Created relationship between users and users_info
+- Created query which will fetch users and users_info
+-
+
+### Changed
+-
+
+### Removed
+-
+
+### Bugs
+- Find solution to insert query with INNER JOIN on additional-profile-information.php
+- Warning: array_push() expects parameter 1 to be array, null given in C:\xampp\htdocs\app\backend\src\templates\template-parts\setting-page\additional-profile-information.php on line 33
