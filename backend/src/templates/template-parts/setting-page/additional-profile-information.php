@@ -31,6 +31,9 @@ if (isset ($_POST['additionalSubmit'])) {
 
         if(move_uploaded_file($fileTmpPath, $dest_path)) {
             // Add code here if every condition is good
+            $session_username = $_SESSION['username'];
+
+            $additionalProfileUpdate = $db->query('UPDATE users SET work = ?, education = ?, phone_number = ?, state = ?, home_town = ?, relationship_status = ?, gender = ?, hobbies = ?, website = ?, company = ?, position = ?, bio = ? WHERE username = ?', $work, $education, $phoneNumber, $state, $homeTown, $relationshipStatus, $gender, $hobbies, $website, $company, $position, $bio, $session_username);
 
         }
     }
