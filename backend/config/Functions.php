@@ -7,6 +7,8 @@ class Functions
 {
 
     public $connection;
+    public $data;
+    public $placeholder;
 
     // Redirection
     public function redirect($location)
@@ -35,11 +37,17 @@ class Functions
     }
 
     // Password generator
-
     public function password_generate($chars)
     {
         $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz!@#$%^&*()_+';
         return substr(str_shuffle($data), 0, $chars);
+    }
+
+    // Check if is data empty
+    public function checkEmpty($data, $placeholder)
+    {
+        $empty = !empty($data) ? $data : $placeholder;
+        return $empty;
     }
 
 }
