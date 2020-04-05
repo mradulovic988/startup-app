@@ -143,6 +143,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Merged users and users_info table into users
 - SELECT * FROM is changed to SELECT `to specific data` FROM
+- Fixed method checkEmpty()
+- Fixed issue with deleting query on user delete
 
 ### Removed
 - Relationship between users and users_info
@@ -150,5 +152,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - users_info database table deleted
 
 ### Bugs
-- On additional-profile-information-form.php method checkEmpty() method won't work, but when it's called directly from the file everything work
 - Warning: array_push() expects parameter 1 to be array, null given in C:\xampp\htdocs\app\backend\src\templates\template-parts\setting-page\additional-profile-information.php on line 33

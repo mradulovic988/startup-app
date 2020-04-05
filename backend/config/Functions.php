@@ -46,7 +46,7 @@ class Functions
     // Check if is data empty
     public function checkEmpty($data, $placeholder)
     {
-        $empty = !empty($data) ? $data : $placeholder;
+        $empty = !empty($_SESSION[$data]) ? $_SESSION[$data] : $placeholder;
         return $empty;
     }
 
