@@ -7,7 +7,7 @@ if (isset($_POST['login_user'])) {
 
 	$password = md5($password);
 
-    $update_users = $db->query('SELECT * FROM users WHERE username = ?', $username)->fetchAll();
+    $update_users = $db->query('SELECT id, username, password, fname, lname, email, date FROM users WHERE username = ?', $username)->fetchAll();
 
     foreach ($update_users as $update_user) {
         $db_id          = $update_user['id'];

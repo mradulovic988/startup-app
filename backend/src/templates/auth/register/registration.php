@@ -36,7 +36,7 @@ if ( isset ($_POST['create_user']) ) {
     if ($password_lenght < 8) { array_push($errors, "Password needs to have more than 8 characters."); }
 
     // Check if the username and email are uniq
-    $register = $db->query('SELECT * FROM users WHERE username = ? OR email = ? LIMIT 1', $username, $email)->fetchArray();
+    $register = $db->query('SELECT username, email FROM users WHERE username = ? OR email = ? LIMIT 1', $username, $email)->fetchArray();
 
     if ($register) {
         if ($register['username'] === $username) {

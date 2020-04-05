@@ -141,11 +141,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Changed
--
+- Merged users and users_info table into users
+- SELECT * FROM is changed to SELECT `to specific data` FROM
 
 ### Removed
--
+- Relationship between users and users_info
+- Query which will fetch users and users_info
+- users_info database table deleted
 
 ### Bugs
-- Find solution to insert query with INNER JOIN on additional-profile-information.php
 - Warning: array_push() expects parameter 1 to be array, null given in C:\xampp\htdocs\app\backend\src\templates\template-parts\setting-page\additional-profile-information.php on line 33

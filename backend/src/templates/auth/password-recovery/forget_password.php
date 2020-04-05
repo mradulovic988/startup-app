@@ -6,7 +6,7 @@ if (isset($_POST['recoveryPassword'])) {
     $username   = $_POST['username'];
     $email      = $_POST['email'];
 
-    $passwordRecovery = $db->query('SELECT * FROM users WHERE username = ?', $username)->fetchAll();
+    $passwordRecovery = $db->query('SELECT username, email FROM users WHERE username = ?', $username)->fetchAll();
 
     foreach ($passwordRecovery as $password) {
         $db_username    = $password['username'];
