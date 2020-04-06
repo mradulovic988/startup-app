@@ -55,8 +55,11 @@ class Functions
     }
 
     // Select data from any query
-    public function selectQuery($dataQuery, $index, $placeholderIndex) {
-        $emptyQuery = !empty ($dataQuery[$index]) ? $dataQuery[$index] : $placeholderIndex;
+    public function selectQuery($dataQuery, $index, $placeholderIndex)
+    {
+        $path = '../pages/assets/img/uploaded_image/'; // Manage path directly in the file where the method is called
+
+        $emptyQuery = !empty ($dataQuery[$index]) ? $path.$dataQuery[$index] : $placeholderIndex;
         return $emptyQuery;
     }
 

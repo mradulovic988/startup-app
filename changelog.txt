@@ -157,6 +157,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 04.06.2020
 ### Added
 - selectQuery() method for selecting any query
+- index.html just for test purpose
 
 ### Changed
 - All session values for additional profile information are changed to the database value
@@ -165,5 +166,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -
 
 ### Bugs
+- Manage path directly in the file where the method is called
 - Check method about profileImage
 - Warning: array_push() expects parameter 1 to be array, null given in C:\xampp\htdocs\app\backend\src\templates\template-parts\setting-page\additional-profile-information.php on line 33

@@ -36,7 +36,8 @@ foreach ($selectAddProfile as $profile) { // Start database foread ?>
                                         <label for="imageUpload"></label>
                                     </div>
                                     <div class="avatar-preview">
-                                        <div id="imagePreview" style="background-image: url('../pages/assets/img/uploaded_image/unnamed.png');">
+
+                                        <div id="imagePreview" style="background-image: url('<?= $function->selectQuery($profile, 'profile_image', '../pages/assets/img/brands/avatar.png'); ?>');">
                                         </div>
                                     </div>
                                 </div>
