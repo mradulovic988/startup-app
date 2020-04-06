@@ -1,3 +1,10 @@
+<?php
+$username = $_SESSION['username'];
+
+$selectAddProfile = $db->query('SELECT profile_image, work, education, phone_number, state, current_city, home_town, relationship_status, gender, hobbies, website, company, position, bio FROM users WHERE username = ?', $username)->fetchAll();
+
+foreach ($selectAddProfile as $profile) { // Start database foread ?>
+
 <div class="container-fluid">
     <h1 class="mt-4"><?= Localization::localizationString('profile_information') ?></h1>
     <ol class="breadcrumb mb-4">
@@ -29,7 +36,7 @@
                                         <label for="imageUpload"></label>
                                     </div>
                                     <div class="avatar-preview">
-                                        <div id="imagePreview" style="background-image: url('../pages/assets/img/brands/avatar.png');">
+                                        <div id="imagePreview" style="background-image: url('../pages/assets/img/uploaded_image/unnamed.png');">
                                         </div>
                                     </div>
                                 </div>
@@ -152,6 +159,9 @@
     </div>
 
 </div>
+
+<?php } // End foreach loops for database query ?>
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
 <script>
     function readURL(input) {

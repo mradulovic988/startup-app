@@ -9,6 +9,10 @@ class Functions
     public $connection;
     public $data;
     public $placeholder;
+    public $dataQuery;
+    public $index;
+    public $dataPlaceholder;
+    public $placeholderIndex;
 
     // Redirection
     public function redirect($location)
@@ -48,6 +52,12 @@ class Functions
     {
         $empty = !empty($_SESSION[$data]) ? $_SESSION[$data] : $placeholder;
         return $empty;
+    }
+
+    // Select data from any query
+    public function selectQuery($dataQuery, $index, $placeholderIndex) {
+        $emptyQuery = !empty ($dataQuery[$index]) ? $dataQuery[$index] : $placeholderIndex;
+        return $emptyQuery;
     }
 
 }

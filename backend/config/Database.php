@@ -139,5 +139,4 @@ class Database
         if (is_int($var)) return 'i';
         return 'b';
     }
-
 }

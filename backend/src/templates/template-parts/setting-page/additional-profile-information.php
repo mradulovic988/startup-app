@@ -3,7 +3,7 @@ if (isset ($_POST['additionalSubmit'])) {
 
     // Declaring all variables
     $fileTmpPath                = $_FILES['imageUpload']['tmp_name'];
-    $fileName                   = $_FILES['imageUpload']['name'];
+    $profileImage               = $_FILES['imageUpload']['name'];
     $fileSize                   = $_FILES['imageUpload']['size'];
     $fileType                   = $_FILES['imageUpload']['type'];
 
@@ -21,25 +21,27 @@ if (isset ($_POST['additionalSubmit'])) {
     $position                   = mysqli_real_escape_string($db->connection, $_POST['position']);
     $bio                        = mysqli_real_escape_string($db->connection, $_POST['bio']);
 
-    $fileNameCmps               = explode(".", $fileName);
+    $fileNameCmps               = explode(".", $profileImage);
     $fileExtension              = strtolower(end($fileNameCmps));
-    $newFileName                = md5(time() . $fileName) . '.' . $fileExtension;
     $allowedfileExtensions      = array('jpg', 'png', 'jpeg');
 
     if (in_array($fileExtension, $allowedfileExtensions)) {
-        $uploadFileDir = 'C:/xampp/htdocs/App/backend/src/templates/template-parts/setting-page/uploaded_image/';
-        $dest_path = $uploadFileDir . $newFileName;
+        $uploadFileDir = '../pages/assets/img/uploaded_image/';
+        $dest_path = $uploadFileDir . $profileImage;
 
         if(move_uploaded_file($fileTmpPath, $dest_path)) {
             // Add code here if every condition is good
             $session_username = $_SESSION['username'];
 
-            $additionalProfileUpdate = $db->query('UPDATE users SET work = ?, education = ?, phone_number = ?, state = ?, current_city = ?, home_town = ?, relationship_status = ?, gender = ?, hobbies = ?, website = ?, company = ?, position = ?, bio = ? WHERE username = ?', $work, $education, $phoneNumber, $state, $currentCity, $homeTown, $relationshipStatus, $gender, $hobbies, $website, $company, $position, $bio, $session_username);
+            $additionalProfileUpdate = $db->query('UPDATE users SET profile_image = ?, work = ?, education = ?, phone_number = ?, state = ?, current_city = ?, home_town = ?, relationship_status = ?, gender = ?, hobbies = ?, website = ?, company = ?, position = ?, bio = ? WHERE username = ?', $profileImage, $work, $education, $phoneNumber, $state, $currentCity, $homeTown, $relationshipStatus, $gender, $hobbies, $website, $company, $position, $bio, $session_username);
 
             $username = $_SESSION['username'];
-            $additionalProfileSelect = $db->query('SELECT work, education, phone_number, state, current_city, home_town, relationship_status, gender, hobbies, website, company, position, bio FROM users WHERE username = ?', $username)->fetchAll();
+            $additionalProfileSelect = $db->query('SELECT profile_image, work, education, phone_number, state, current_city, home_town, relationship_status, gender, hobbies, website, company, position, bio FROM users WHERE username = ?', $username)->fetchAll();
 
             foreach ($additionalProfileSelect as $select) {
+
+                // Declare all values from database in variable
+                $db_profileImage            = $select['profile_image'];
                 $db_work                    = $select['work'];
                 $db_education               = $select['education'];
                 $db_phone_number            = $select['phone_number'];
@@ -55,7 +57,9 @@ if (isset ($_POST['additionalSubmit'])) {
                 $db_bio                     = $select['bio'];
             }
 
+            // Declare all values from database in sessions
             $_SESSION['work']                   = $db_work;
+            $_SESSION['profile_image']          = $db_profileImage;
             $_SESSION['education']              = $db_education;
             $_SESSION['phone_number']           = $db_phone_number;
             $_SESSION['state']                  = $db_state;
