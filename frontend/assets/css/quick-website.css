@@ -707,6 +707,10 @@ mark,
     height: auto;
 }
 
+img.img-fluid.rounded.shadow.img-fluid-custom {
+    height: 190px;
+}
+
 .img-thumbnail
 {
     max-width: 100%;

@@ -169,3 +169,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Manage path directly in the file where the method is called
 - Check method about profileImage
 - Warning: array_push() expects parameter 1 to be array, null given in C:\xampp\htdocs\app\backend\src\templates\template-parts\setting-page\additional-profile-information.php on line 33
+
+## [1.0.0] - 04.07.2020
+### Added
+- Finished Profile information lead form
+- Listed on front end About page all register users
+
+### Changed
+-
+
+### Removed
+-
+
+### Bugs
+-

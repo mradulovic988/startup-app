@@ -36,22 +36,13 @@ foreach ($selectAddProfile as $profile) { // Start database foread ?>
                                         <label for="imageUpload"></label>
                                     </div>
                                     <div class="avatar-preview">
-
-<!--                                        <div id="imagePreview" style="background-image: url('../pages/assets/img/brands/avatar.png');">-->
-
-
-
-
                                         <div id="imagePreview" style="background-image: url('<?= $function->selectQuery('../pages/assets/img/uploaded_image/', $profile, 'profile_image', '../pages/assets/img/brands/avatar.png') ?>');">
-
-
-
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
+                            <h3 class="text-center font-weight-normal">Hi, <?= $_SESSION['fname'] ?></h3>
                             <h3 class="text-center font-weight-light"><?= Localization::localizationString ( 'customize' ); ?></h3>
                             <small id="username" class="text-center form-text text-muted mb-5"><?= Localization::localizationString ( 'detail_user' ); ?></small>
 
