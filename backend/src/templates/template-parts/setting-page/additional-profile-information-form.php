@@ -37,7 +37,16 @@ foreach ($selectAddProfile as $profile) { // Start database foread ?>
                                     </div>
                                     <div class="avatar-preview">
 
-                                        <div id="imagePreview" style="background-image: url('<?= $function->selectQuery($profile, 'profile_image', '../pages/assets/img/brands/avatar.png'); ?>');">
+<!--                                        <div id="imagePreview" style="background-image: url('../pages/assets/img/brands/avatar.png');">-->
+
+
+
+
+                                        <div id="imagePreview" style="background-image: url('<?= $function->selectQuery('../pages/assets/img/uploaded_image/', $profile, 'profile_image', '../pages/assets/img/brands/avatar.png') ?>');">
+
+
+
+
                                         </div>
                                     </div>
                                 </div>
@@ -49,19 +58,19 @@ foreach ($selectAddProfile as $profile) { // Start database foread ?>
                             <div class="form-row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <input class="form-control py-4 bottom-border" id="work" type="text" name="work" placeholder="<?= $function->checkEmpty('work', 'Work'); ?>" required/>
+                                        <input class="form-control py-4 bottom-border" id="work" type="text" name="work" placeholder="<?= $function->selectQuery('', $profile, 'work', 'Work') ?>" required/>
                                     </div>
                                 </div>
 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <input class="form-control py-4 bottom-border" id="education" type="text" name="education" placeholder="<?= $function->checkEmpty('education', 'Education'); ?>" required />
+                                        <input class="form-control py-4 bottom-border" id="education" type="text" name="education" placeholder="<?= $function->selectQuery('', $profile, 'education', 'Education') ?>" required />
                                     </div>
                                 </div>
 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <input class="form-control py-4 bottom-border" id="phoneNumber" type="tel" name="phoneNumber" placeholder="<?= $function->checkEmpty('phone_number', 'Phone Number'); ?>" />
+                                        <input class="form-control py-4 bottom-border" id="phoneNumber" type="tel" name="phoneNumber" placeholder="<?= $function->selectQuery('', $profile, 'phone_number', 'Phone Number') ?>" />
                                     </div>
                                 </div>
                             </div>
@@ -69,19 +78,19 @@ foreach ($selectAddProfile as $profile) { // Start database foread ?>
                             <div class="form-row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <input class="form-control py-4 bottom-border" id="state" type="text" name="state" placeholder="<?= $function->checkEmpty('state', 'State'); ?>" required />
+                                        <input class="form-control py-4 bottom-border" id="state" type="text" name="state" placeholder="<?= $function->selectQuery('', $profile, 'state', 'State') ?>" required />
                                     </div>
                                 </div>
 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <input class="form-control py-4 bottom-border" id="currentCity" type="text" name="currentCity" placeholder="<?= $function->checkEmpty('current_city', 'Current City'); ?>" required />
+                                        <input class="form-control py-4 bottom-border" id="currentCity" type="text" name="currentCity" placeholder="<?= $function->selectQuery('', $profile, 'current_city', 'Current City') ?>" required />
                                     </div>
                                 </div>
 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <input class="form-control py-4 bottom-border" id="homeTown" type="text" name="homeTown" placeholder="<?= $function->checkEmpty('home_town', 'Home Town'); ?>"  required/>
+                                        <input class="form-control py-4 bottom-border" id="homeTown" type="text" name="homeTown" placeholder="<?= $function->selectQuery('', $profile, 'home_town', 'Home Town') ?>"  required/>
                                     </div>
                                 </div>
                             </div>
@@ -90,7 +99,7 @@ foreach ($selectAddProfile as $profile) { // Start database foread ?>
 
                                 <div class="col-md-4">
                                     <select class="form-control form-control-lg bottom-border" id="relationshipStatus" name="relationshipStatus[]" required>
-                                        <option value=""><?= $function->checkEmpty('relationship_status', Localization::localizationString('relationship_status')); ?></option>
+                                        <option value=""><?= $function->selectQuery('', $profile, 'relationship_status', Localization::localizationString('relationship_status')); ?></option>
                                         <option value="Single"><?= Localization::localizationString('single'); ?></option>
                                         <option value="In a Relatioship"><?= Localization::localizationString('in_relationship'); ?></option>
                                         <option value="Engaged"><?= Localization::localizationString('engaded'); ?></option>
@@ -107,7 +116,7 @@ foreach ($selectAddProfile as $profile) { // Start database foread ?>
 
                                 <div class="col-md-4">
                                     <select class="form-control form-control-lg bottom-border" id="gender" name="gender[]" required>
-                                        <option value=""><?= $function->checkEmpty('gender', Localization::localizationString('gender')); ?></option>
+                                        <option value=""><?= $function->selectQuery('', $profile, 'gender', Localization::localizationString('gender')); ?></option>
                                         <option value="Male"><?= Localization::localizationString('male'); ?></option>
                                         <option value="Female"><?= Localization::localizationString('female'); ?></option>
                                         <option value="Custom"><?= Localization::localizationString('custom'); ?></option>
@@ -117,7 +126,7 @@ foreach ($selectAddProfile as $profile) { // Start database foread ?>
 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <input class="form-control py-4 bottom-border" id="hobbies" type="text" name="hobbies" placeholder="<?= $function->checkEmpty('hobbies', 'Hobbies'); ?>" required />
+                                        <input class="form-control py-4 bottom-border" id="hobbies" type="text" name="hobbies" placeholder="<?= $function->selectQuery('', $profile, 'hobbies', 'Hobbies') ?>" required />
                                     </div>
                                 </div>
                             </div>
@@ -125,19 +134,19 @@ foreach ($selectAddProfile as $profile) { // Start database foread ?>
                             <div class="form-row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <input class="form-control py-4 bottom-border" id="website" type="text" name="website" placeholder="<?= $function->checkEmpty('website', 'Website'); ?>" />
+                                        <input class="form-control py-4 bottom-border" id="website" type="text" name="website" placeholder="<?= $function->selectQuery('', $profile, 'website', 'Website') ?>" />
                                     </div>
                                 </div>
 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <input class="form-control py-4 bottom-border" id="company" type="text" name="company" placeholder="<?= $function->checkEmpty('company', 'Company'); ?>" />
+                                        <input class="form-control py-4 bottom-border" id="company" type="text" name="company" placeholder="<?= $function->selectQuery('', $profile, 'company', 'Company') ?>" />
                                     </div>
                                 </div>
 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <input class="form-control py-4 bottom-border" id="position" type="text" name="position" placeholder="<?= $function->checkEmpty('position', 'Position'); ?>" />
+                                        <input class="form-control py-4 bottom-border" id="position" type="text" name="position" placeholder="<?= $function->selectQuery('', $profile, 'position', 'Position') ?>" />
                                     </div>
                                 </div>
                             </div>
@@ -145,7 +154,7 @@ foreach ($selectAddProfile as $profile) { // Start database foread ?>
                             <div class="form-row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <textarea class="form-control bottom-border" name="bio" rows="3" placeholder="<?= $function->checkEmpty('bio', 'Write something about you..'); ?>" required></textarea>
+                                        <textarea class="form-control bottom-border" name="bio" rows="3" placeholder="<?= $function->selectQuery('', $profile, 'bio', 'Write something about you...') ?>" required></textarea>
                                     </div>
                                 </div>
                             </div>
