@@ -2,7 +2,7 @@
 <div id="layoutSidenav">
     <div id="layoutSidenav_nav">
         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-            <?php include '../src/templates/template-parts/navigation.php'; ?>
+            <?php include '../src/templates/template-parts/navigation/navigation.php'; ?>
             <?php include '../src/templates/auth/users/user_name.php'; ?>
         </nav>
     </div>
@@ -21,23 +21,33 @@
 
                 <!-- Additional Information -->
                 <div class="card mb-4">
-                    <?php include '../src/templates/template-parts/setting-page/additional-profile-information.php'; ?>
+                    <?php include '../src/templates/template-parts/setting-page/additional-profile-information/additional-profile-information.php'; ?>
                 </div>
 
                 <!-- Profile Information -->
                 <div class="card mb-4">
-                    <?php include '../src/templates/template-parts/setting-page/profile-information.php'; ?>
+                    <?php include '../src/templates/template-parts/setting-page/profile-information/profile-information-form.php'; ?>
                 </div>
 
                 <!-- Security Information -->
                 <div class="card mb-4">
-                    <?php include '../src/templates/template-parts/setting-page/security-information.php'; ?>
+                    <?php include '../src/templates/template-parts/setting-page/security-information/security-information-form.php'; ?>
                 </div>
 
                 <!-- Account Information -->
                 <div class="card mb-4">
-                    <?php include '../src/templates/template-parts/setting-page/account-information.php'; ?>
+                    <?php include '../src/templates/template-parts/setting-page/account-information/account-information-form.php'; ?>
                 </div>
+
+                <!-- Admin User -->
+                <!-- Only for admin user privilage -->
+                <?php if ($_SESSION['user_role'] === 10) : ?>
+
+                <div class="card mb-4">
+                    <?php include '../src/templates/template-parts/setting-page/create-admin-user/create-admin-user-form.php'; ?>
+                </div>
+
+                <?php endif; ?>
             </div>
         </main>
         <?php include '../src/templates/footer/footer.php'; ?>

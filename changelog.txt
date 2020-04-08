@@ -187,9 +187,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 04.08.2020
 ### Added
 - Added database folder and backup file from the PHPMyAdmin for better managing
+- Added user role for different privilages
+- Added admin system on dashboard only for admin user
 
 ### Changed
--
+- Setting page folder in backend refactored
 
 ### Removed
 -

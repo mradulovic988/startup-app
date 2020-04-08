@@ -1,24 +1,12 @@
 <?php
-/**
- * Register template
- *
- * @author Marko
- * @version 1.0
- *
- */
-
-$username = "";
-$email    = "";
-$errors = array();
-
-if ( isset ($_POST['create_user']) ) {
+if ( isset ($_POST['create_user_admin']) ) {
     $fname                  = mysqli_real_escape_string($db->connection, $_POST['fname']);
     $lname                  = mysqli_real_escape_string($db->connection, $_POST['lname']);
     $username               = mysqli_real_escape_string($db->connection, $_POST['username']);
     $email                  = mysqli_real_escape_string($db->connection, $_POST['email']);
     $password               = mysqli_real_escape_string($db->connection, $_POST['password']);
     $password_confirm       = mysqli_real_escape_string($db->connection, $_POST['password_confirm']);
-    $user_role              = mysqli_real_escape_string($db->connection, $_POST['user_role']);
+    $user_role_admin        = mysqli_real_escape_string($db->connection, $_POST['user_role_admin']);
 
     // Validation
     if (empty($fname)) { array_push($errors, "First Name is required"); }
@@ -52,13 +40,11 @@ if ( isset ($_POST['create_user']) ) {
     if (count($errors) == 0) {
         $password = md5($password_confirm);
 
-        $add_user = $db->query("INSERT INTO users (fname, lname, username, email, password, date, user_role) VALUES (?, ?, ?, ?, ?, NOW(), ?)", $fname, $lname, $username, $email, $password, $user_role);
+        $add_user = $db->query("INSERT INTO users (fname, lname, username, email, password, date, user_role) VALUES (?, ?, ?, ?, ?, NOW(), ?)", $fname, $lname, $username, $email, $password, $user_role_admin);
 
         $_SESSION['username'] = $username;
         $_SESSION['success'] = "You are now logged in";
 
         $add_user->close();
-
-        header('location: http://app.beta/backend/pages/login.php');
     }
 }

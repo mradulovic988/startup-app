@@ -2,7 +2,7 @@
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <?php include '../src/templates/template-parts/navigation.php'; ?>
+                    <?php include '../src/templates/template-parts/navigation/navigation.php'; ?>
                     <?php include '../src/templates/auth/users/user_name.php'; ?>
                 </nav>
             </div>

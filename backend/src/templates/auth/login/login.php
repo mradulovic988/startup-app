@@ -7,7 +7,7 @@ if (isset($_POST['login_user'])) {
 
 	$password = md5($password);
 
-    $update_users = $db->query('SELECT id, username, password, fname, lname, email, date FROM users WHERE username = ?', $username)->fetchAll();
+    $update_users = $db->query('SELECT id, username, password, fname, lname, email, date, user_role FROM users WHERE username = ?', $username)->fetchAll();
 
     foreach ($update_users as $update_user) {
         $db_id          = $update_user['id'];
@@ -17,6 +17,7 @@ if (isset($_POST['login_user'])) {
         $db_lastname    = $update_user['lname'];
         $db_email       = $update_user['email'];
         $db_date        = $update_user['date'];
+        $db_user_role   = $update_user['user_role'];
     }
 
 	if ($username !== $db_username && $password !== $db_password) {
@@ -30,6 +31,7 @@ if (isset($_POST['login_user'])) {
 		$_SESSION['lname']      = $db_lastname;
 		$_SESSION['email']      = $db_email;
 		$_SESSION['date']       = $db_date;
+		$_SESSION['user_role']  = $db_user_role;
 
 		$function->redirect('../../../backend/pages/index.php');
 	} else {

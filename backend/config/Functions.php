@@ -64,6 +64,13 @@ class Functions
         endif;
     }
 
+    // Check if is admin
+    public function isAdmin() {
+        if ($_SESSION['user_role'] == 10) {
+
+        }
+    }
+
 }
 
 $function = new Functions();

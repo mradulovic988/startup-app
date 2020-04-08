@@ -1,12 +1,46 @@
 <div class="sb-sidenav-menu">
     <div class="nav">
         <div class="sb-sidenav-menu-heading">Core</div>
-        <a class="nav-link" href="index.php">
+        <a class="nav-link" href="../../../../../index.php">
             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
             Dashboard</a>
         <a class="nav-link" href="http://app.beta/frontend/index.php" target="_blank">
             <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
             View Site</a>
+
+        <?php
+        // Show only if the user role is Administrator
+        if ($_SESSION['user_role'] === 10) : ?>
+
+            <div class="sb-sidenav-menu-heading">Admin</div>
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsers" aria-expanded="false" aria-controls="collapseLayouts">
+                <div class="sb-nav-link-icon"><i class="fas fa-users-cog"></i></div>
+                Users
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="collapseUsers" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link" href="#">All Users</a>
+                    <a class="nav-link" href="#">Add New User</a>
+                    <a class="nav-link" href="#">Manage Users</a>
+                </nav>
+            </div>
+
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAds" aria-expanded="false" aria-controls="collapseLayouts">
+                <div class="sb-nav-link-icon"><i class="fas fa-bullhorn"></i></div>
+                Ads
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="collapseAds" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link" href="#">All Ads</a>
+                    <a class="nav-link" href="#">Manage Ads</a>
+                    <a class="nav-link" href="#">Memberships</a>
+                </nav>
+            </div>
+
+        <?php endif; ?>
+
         <div class="sb-sidenav-menu-heading">Interface</div>
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>

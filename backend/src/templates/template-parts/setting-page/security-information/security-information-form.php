@@ -1,13 +1,4 @@
-<?php
-// Update user password
-if (isset($_POST['editSecurity'])) {
-
-    $pass = md5($_POST['pass']);
-
-    $editSecurity = $db->query('UPDATE users SET password = ? WHERE id = ?', $pass, $_SESSION['id']);
-
-}
-?>
+<?php include 'security-information.php'; ?>
 <div class="card-header"><i class="fas fa-table mr-1"></i>Security Information</div>
 <div class="card-body">
     <div class="table-responsive">

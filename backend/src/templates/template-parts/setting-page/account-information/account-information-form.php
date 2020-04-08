@@ -1,12 +1,4 @@
-<?php
-if (isset($_POST['deleteAccount'])) {
-
-    $delete_account = $db->query('DELETE FROM users WHERE id = ?', $_SESSION['id']);
-
-    $function->redirect('http://app.beta/frontend/index.php');
-}
-?>
-
+<?php include 'account-information.php'; ?>
 <div class="card-header"><i class="fas fa-table mr-1"></i>Account Information</div>
 <div class="card-body">
     <div class="table-responsive">

@@ -32,6 +32,9 @@
                                         <div class="form-group"><label class="small mb-1" for="inputConfirmPassword">Confirm Password</label><input class="form-control py-4" id="inputConfirmPassword" type="password" placeholder="Confirm password" name="password_confirm" required /></div>
                                     </div>
                                 </div>
+
+                                <input type="hidden" name="user_role" value="1"/>
+
                                 <div class="form-group mt-4 mb-0">
                                     <input type="submit" name="create_user" class="btn btn-primary btn-block" value="Create Account">
                                 </div>
