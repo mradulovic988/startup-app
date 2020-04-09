@@ -1,7 +1,7 @@
 <div class="sb-sidenav-menu">
     <div class="nav">
         <div class="sb-sidenav-menu-heading">Core</div>
-        <a class="nav-link" href="../../../../../index.php">
+        <a class="nav-link" href="/backend/pages/index.php">
             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
             Dashboard</a>
         <a class="nav-link" href="http://app.beta/frontend/index.php" target="_blank">
@@ -20,8 +20,7 @@
             </a>
             <div class="collapse" id="collapseUsers" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="#">All Users</a>
-                    <a class="nav-link" href="#">Add New User</a>
+                    <a class="nav-link" href="/backend/pages/all_users.php">All Users</a>
                     <a class="nav-link" href="#">Manage Users</a>
                 </nav>
             </div>

@@ -189,9 +189,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added database folder and backup file from the PHPMyAdmin for better managing
 - Added user role for different privilages
 - Added admin system on dashboard only for admin user
+- All users page with listed all users in table with search engine
 
 ### Changed
 - Setting page folder in backend refactored
+- Redirection after login on Profile page
 
 ### Removed
 -

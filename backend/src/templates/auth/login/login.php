@@ -33,7 +33,7 @@ if (isset($_POST['login_user'])) {
 		$_SESSION['date']       = $db_date;
 		$_SESSION['user_role']  = $db_user_role;
 
-		$function->redirect('../../../backend/pages/index.php');
+		$function->redirect('../../../backend/pages/profile-settings.php');
 	} else {
 	    $function->redirect('login.php');
 	}
