@@ -13,6 +13,7 @@ class Functions
     public $index;
     public $dataPlaceholder;
     public $placeholderIndex;
+    public $path;
 
     // Redirection
     public function redirect($location)

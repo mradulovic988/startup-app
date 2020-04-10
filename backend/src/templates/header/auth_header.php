@@ -17,6 +17,7 @@ include 'C:/xampp/htdocs/App/backend/config/Functions.php';
         <title>App</title>
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="icon" href="../../../../frontend/assets/img/brand/favicon.png" type="image/png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
     </head>
     <body class="bg-primary">

@@ -4,7 +4,8 @@
             <th>Full Name</th>
             <th>Username</th>
             <th>Email</th>
-            <th>Start date</th>
+            <th>Membership Start</th>
+            <th>Membership End</th>
             <th>User role</th>
             <th>Upgrade role</th>
             <th>Delete</th>
@@ -15,7 +16,8 @@
             <th>Full Name</th>
             <th>Username</th>
             <th>Email</th>
-            <th>Start date</th>
+            <th>Membership Start</th>
+            <th>Membership End</th>
             <th>User role</th>
             <th>Upgrade role</th>
             <th>Delete</th>
@@ -31,16 +33,21 @@
 			<td><?= $allUser['username'] ?></td>
 			<td><?= $allUser['email'] ?></td>
 			<td><?= $allUser['date'] ?></td>
+			<td>Membership End</td>
 			<td><?= ($allUser['user_role'] === 10) ? 'Admin' : 'Customer'; ?></td>
 			<td>
                 <a href="#" data-toggle="modal" class="upgradeBtn" data-target="#upgradeUserRole">Upgrade</a>
-                <input type="hidden" name="db_id" value="<?= $allUser['id'] ?>" class="db_id">
+                <input type="hidden" name="db_upgrade_id" value="<?= $allUser['id'] ?>" class="db_upgrade_id">
             </td>
-			<td><a href="#">Delete</a></td>
+			<td>
+                <a href="#" data-toggle="modal" class="deleteBtn" data-target="#deleteUserRole">Delete</a>
+                <input type="hidden" name="db_delete_id" value="<?= $allUser['id'] ?>" class="db_delete_id">
+            </td>
 		</tr>
 	<?php } ?>
 		
 	</tbody>
 </table>
 
-<?php include 'upgrade_user_role/user_role_form.php'; ?>
+<?php include 'upgrade_user_role/user_role_update_form.php'; ?>
+<?php include 'delete_user_role/user_role_delete_form.php'; ?>

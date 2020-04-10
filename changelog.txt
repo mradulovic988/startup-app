@@ -205,6 +205,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Added table for Upgrade user role and delete user
 - Upgrade user role
+- Delete user
 
 ### Changed
 -
