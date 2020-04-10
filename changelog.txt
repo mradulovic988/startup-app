@@ -200,3 +200,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Bugs
 -
+
+## [1.0.0] - 04.10.2020
+### Added
+- Added table for Upgrade user role and delete user
+- Upgrade user role
+
+### Changed
+-
+
+### Removed
+-
+
+### Bugs
+-

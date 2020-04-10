@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2020 at 05:08 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.2.14
+-- Generation Time: Apr 10, 2020 at 09:04 PM
+-- Server version: 10.4.10-MariaDB
+-- PHP Version: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -49,7 +48,7 @@ CREATE TABLE `users` (
   `company` varchar(30) NOT NULL,
   `position` varchar(30) NOT NULL,
   `bio` varchar(250) NOT NULL,
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `date` timestamp NOT NULL DEFAULT current_timestamp(),
   `user_role` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -60,7 +59,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `fname`, `lname`, `username`, `email`, `password`, `profile_image`, `work`, `education`, `phone_number`, `state`, `current_city`, `home_town`, `relationship_status`, `gender`, `hobbies`, `website`, `company`, `position`, `bio`, `date`, `user_role`) VALUES
 (56, 'Marko', 'Radulovic', 'upss1988', 'upss070288@gmail.com', 'b2d125c76b14d7b78823841ce3130ea9', '20190907_123001.jpg', 'Software Developer', 'MIT', '0606631540', 'Serbia', 'Smederevo', 'Smederevo', 'Married', 'Male', 'Programming', 'mlab-studio.com', 'M Lab Studio', 'CEO', 'I\\\'m a communicative, active a', '2020-04-06 22:38:27', 10),
 (59, 'Andrija', 'Radulovic', 'andra2020', 'andra@gmail.com', '8758b8ee2b84d22a13cf908843f4d17a', 'f38e01fb-2920-4c4f-b708-87a4d151411c.JPG', 'Sleaping', 'Eating', '55555555', 'Serbia', 'Smederevo', 'Smederevo', 'Single', 'Male', 'Crying', 'mlab-studio.com', 'M Lab Studio', 'CEO', 'I\\\'m a little baby boy from Serbia, Smederevo. I was born on February 29th, 2020 and I\\\'m really young right now :)', '2020-04-07 14:26:32', 1),
-(60, 'Marija', 'Stolic', 'majajoma88', 'majajoma88@gmail.com', '9f48e78caaf2b5227367918268907d53', 'IMG_20191219_231842_132.jpg', 'Medical nurse', 'Medical school', '0645555555', 'Serbia', 'Smederevo', 'Smederevo', 'Married', 'Female', 'Graphic manipulation', '', '', '', 'I love photography, nursing and my son Andrija :)', '2020-04-07 22:36:46', 1),
+(60, 'Marija', 'Stolic', 'majajoma88', 'majajoma88@gmail.com', '9f48e78caaf2b5227367918268907d53', 'IMG_20191219_231842_132.jpg', 'Medical nurse', 'Medical school', '0645555555', 'Serbia', 'Smederevo', 'Smederevo', 'Married', 'Female', 'Graphic manipulation', '', '', '', 'I love photography, nursing and my son Andrija :)', '2020-04-07 22:36:46', 10),
 (68, 'Slavko', 'Radulovic', 'slavko1949', 'slavko1949@gmail.com', '54c0a2e56a6c98ae295c169e46733b6e', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2020-04-09 23:43:06', 1);
 
 --
