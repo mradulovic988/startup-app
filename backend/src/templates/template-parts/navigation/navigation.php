@@ -21,7 +21,6 @@
             <div class="collapse" id="collapseUsers" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
                     <a class="nav-link" href="/backend/pages/all_users.php">All Users</a>
-                    <a class="nav-link" href="#">Manage Users</a>
                 </nav>
             </div>
 
@@ -32,8 +31,8 @@
             </a>
             <div class="collapse" id="collapseAds" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link" href="/backend/pages/new_ads.php">Create New Ads</a>
                     <a class="nav-link" href="#">All Ads</a>
-                    <a class="nav-link" href="#">Manage Ads</a>
                     <a class="nav-link" href="#">Memberships</a>
                 </nav>
             </div>

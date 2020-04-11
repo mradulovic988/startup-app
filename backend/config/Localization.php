@@ -18,6 +18,7 @@ class Localization
      * All strings inside the project
      */
     static private $strings = array(
+
         // Profile information
         'customize'                         => 'Customize your intro',
         'detail_user'                       => 'Details that you select will be public and will be visible to all users.',

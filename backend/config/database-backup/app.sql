@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2020 at 12:30 AM
+-- Generation Time: Apr 11, 2020 at 08:21 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -61,6 +61,27 @@ INSERT INTO `users` (`id`, `fname`, `lname`, `username`, `email`, `password`, `p
 (59, 'Andrija', 'Radulovic', 'andra2020', 'andra@gmail.com', '8758b8ee2b84d22a13cf908843f4d17a', 'f38e01fb-2920-4c4f-b708-87a4d151411c.JPG', 'Sleaping', 'Eating', '55555555', 'Serbia', 'Smederevo', 'Smederevo', 'Single', 'Male', 'Crying', 'mlab-studio.com', 'M Lab Studio', 'CEO', 'I\\\'m a little baby boy from Serbia, Smederevo. I was born on February 29th, 2020 and I\\\'m really young right now :)', '2020-04-07 14:26:32', 10),
 (60, 'Marija', 'Stolic', 'majajoma88', 'majajoma88@gmail.com', '9f48e78caaf2b5227367918268907d53', 'IMG_20191219_231842_132.jpg', 'Medical nurse', 'Medical school', '0645555555', 'Serbia', 'Smederevo', 'Smederevo', 'Married', 'Female', 'Graphic manipulation', '', '', '', 'I love photography, nursing and my son Andrija :)', '2020-04-07 22:36:46', 1);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users_ads`
+--
+
+CREATE TABLE `users_ads` (
+  `id` int(11) NOT NULL,
+  `user_id` int(255) NOT NULL,
+  `ads_title` varchar(255) NOT NULL,
+  `ads_description` text NOT NULL,
+  `ads_category` varchar(30) NOT NULL,
+  `ads_image` varchar(255) NOT NULL,
+  `ads_start_date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `ads_end_date` varchar(30) NOT NULL,
+  `ads_plan` varchar(30) NOT NULL,
+  `ads_location` varchar(30) NOT NULL,
+  `ads_price` varchar(10) NOT NULL,
+  `ads_phone` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Indexes for dumped tables
 --
@@ -72,6 +93,12 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users_ads`
+--
+ALTER TABLE `users_ads`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -80,6 +107,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+
+--
+-- AUTO_INCREMENT for table `users_ads`
+--
+ALTER TABLE `users_ads`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
