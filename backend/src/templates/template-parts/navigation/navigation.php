@@ -24,6 +24,8 @@
                 </nav>
             </div>
 
+        <?php endif; ?>
+
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAds" aria-expanded="false" aria-controls="collapseLayouts">
                 <div class="sb-nav-link-icon"><i class="fas fa-bullhorn"></i></div>
                 Ads
@@ -32,12 +34,15 @@
             <div class="collapse" id="collapseAds" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
                     <a class="nav-link" href="/backend/pages/new_ads.php">Create New Ads</a>
-                    <a class="nav-link" href="#">All Ads</a>
-                    <a class="nav-link" href="#">Memberships</a>
+                    <a class="nav-link" href="#">Your Ads</a>
+
+                    <?php if ($_SESSION['user_role'] === 10) : ?>
+                        <a class="nav-link" href="#">All Ads</a>
+                        <a class="nav-link" href="#">Memberships</a>
+                    <?php endif; ?>
+
                 </nav>
             </div>
-
-        <?php endif; ?>
 
         <div class="sb-sidenav-menu-heading">Interface</div>
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">

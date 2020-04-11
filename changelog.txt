@@ -208,9 +208,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Delete user
 - Create new Ads blank page added
 - users_ads table created
+- Add new ads form
 
 ### Changed
 - Favicon
+- Added Ads section for all user roles, but admin has membership and all ads
 
 ### Removed
 -
