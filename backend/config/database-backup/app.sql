@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2020 at 08:21 PM
+-- Generation Time: Apr 11, 2020 at 10:39 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -70,16 +70,16 @@ INSERT INTO `users` (`id`, `fname`, `lname`, `username`, `email`, `password`, `p
 CREATE TABLE `users_ads` (
   `id` int(11) NOT NULL,
   `user_id` int(255) NOT NULL,
-  `ads_title` varchar(255) NOT NULL,
+  `ads_name` varchar(255) NOT NULL,
   `ads_description` text NOT NULL,
   `ads_category` varchar(30) NOT NULL,
   `ads_image` varchar(255) NOT NULL,
-  `ads_start_date` timestamp NOT NULL DEFAULT current_timestamp(),
-  `ads_end_date` varchar(30) NOT NULL,
-  `ads_plan` varchar(30) NOT NULL,
-  `ads_location` varchar(30) NOT NULL,
   `ads_price` varchar(10) NOT NULL,
-  `ads_phone` varchar(20) NOT NULL
+  `ads_location` varchar(30) NOT NULL,
+  `ads_phone` varchar(20) NOT NULL,
+  `ads_plan` varchar(30) NOT NULL,
+  `ads_start_date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `ads_end_date` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
