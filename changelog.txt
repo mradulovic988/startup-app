@@ -225,7 +225,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added beta branch
 
 ### Changed
--
+- Change header() to redirection() in registration.php
 
 ### Removed
 -

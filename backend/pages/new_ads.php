@@ -26,6 +26,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8 mb-5">
                             <div class="border-0 rounded-lg mt-5">
+
                                 <form class="md-form" method="post" enctype="multipart/form-data">
 
                                     <div class="form-row">
@@ -41,21 +42,6 @@
                                             </div>
                                         </div>
 
-
-                                    </div>
-
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input class="form-control py-4 bottom-border" id="ads_price" type="text" name="ads_price" placeholder="Price" required/>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input class="form-control py-4 bottom-border" id="ads_location" type="text" name="ads_location" placeholder="Location" required />
-                                            </div>
-                                        </div>
 
                                     </div>
 
@@ -138,15 +124,17 @@
                                     <div class="form-row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="file" name="ads_image" multiple>
+                                                <input type="file" name="ads_image">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Save" name="additionalSubmit">
+                                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Save" name="newAdsSubmit">
                                     </div>
                                 </form>
+                                <?php include '../src/templates/template-parts/ads/new_ads/new_ads_insert.php'; ?>
+
                             </div>
                         </div>
                     </div>
