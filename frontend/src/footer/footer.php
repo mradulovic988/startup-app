@@ -15,26 +15,26 @@
                         <img alt="Image placeholder" src="assets/img/brand/mlab-logo-white.png" id="footer-logo">
                     </a>
                     <!-- Webpixels' mission -->
-                    <p class="mt-4 text-sm opacity-8 pr-lg-4">Webpixels attempts to bring the best development experience to designers and developers by offering the tools needed for having a quick and solid start in most web projects.</p>
+                    <p class="mt-4 text-sm opacity-8 pr-lg-4">M Lab Studio attempts to bring the best development experience to designers and developers by offering the tools needed for having a quick and solid start in most web projects.</p>
                     <!-- Social -->
                     <ul class="nav mt-4">
                         <li class="nav-item">
-                            <a class="nav-link pl-0" href="https://dribbble.com/webpixels" target="_blank">
+                            <a class="nav-link pl-0" href="#" target="_blank">
                                 <i class="fab fa-dribbble"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/webpixels" target="_blank">
+                            <a class="nav-link" href="#" target="_blank">
                                 <i class="fab fa-github"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.instagram.com/webpixelsofficial" target="_blank">
+                            <a class="nav-link" href="#" target="_blank">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.facebook.com/webpixels" target="_blank">
+                            <a class="nav-link" href="#" target="_blank">
                                 <i class="fab fa-facebook"></i>
                             </a>
                         </li>

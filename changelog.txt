@@ -219,3 +219,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Bugs
 -
+
+## [1.0.0] - 04.13.2020
+### Added
+- Added beta branch
+
+### Changed
+-
+
+### Removed
+-
+
+### Bugs
+-
