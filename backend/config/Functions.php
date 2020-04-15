@@ -60,10 +60,13 @@ class Functions
     }
 
     // All plans for the ads
-//    public function choosePlan()
-//    {
-//
-//    }
+    public function choosePlan($dayDelay, $plan)
+    {
+        $timestamp = time()-86400;
+        $date = strtotime('+'.$dayDelay.' day', $timestamp);
+
+        return date('Y-m-d', $date);
+    }
 
 }
 

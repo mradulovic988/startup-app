@@ -235,7 +235,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 04.15.2020
 ### Added
--
+- Added method for counting day per plan on current register ads date
+- Added long NON DRY query - Needs to be optimized
 
 ### Changed
 - Changed structure for navigation and fixed issue with dropbox right upper button

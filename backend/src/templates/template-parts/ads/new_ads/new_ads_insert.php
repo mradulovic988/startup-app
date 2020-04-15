@@ -25,15 +25,23 @@ if (isset ($_POST['newAdsSubmit'])) {
 
         if(move_uploaded_file($ads_fileTmpPath, $ads_dest_path)) {
 
-//            $timestamp = time()-86400;
-//
-//            $date = strtotime("+7 day", $timestamp);
-//            echo date('M d, Y', $date);
+            $ads_plan = $_POST['ads_plan'];
 
-            $users_id = $_SESSION['id'];
+            foreach ($ads_plan as $item) {
+                $users_id = $_SESSION['id'];
 
-            $add_ads = $db->query("INSERT INTO users_ads (user_id, ads_name, ads_description, ads_category, ads_image, ads_price, ads_location, ads_phone, ads_plan) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", $users_id, $ads_name, $ads_description, $ads_category, $ads_image, $ads_price, $ads_location, $ads_phone, $ads_plan);
+                if ($item == 'Free')
+                    $add_free_ads = $db->query("INSERT INTO users_ads (user_id, ads_name, ads_description, ads_category, ads_image, ads_price, ads_location, ads_phone, ads_plan, ads_end_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $users_id, $ads_name, $ads_description, $ads_category, $ads_image, $ads_price, $ads_location, $ads_phone, $ads_plan, $function->choosePlan(3, 'Free'));
 
+                elseif ($item == 'Basic')
+                    $add_basic_ads = $db->query("INSERT INTO users_ads (user_id, ads_name, ads_description, ads_category, ads_image, ads_price, ads_location, ads_phone, ads_plan, ads_end_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $users_id, $ads_name, $ads_description, $ads_category, $ads_image, $ads_price, $ads_location, $ads_phone, $ads_plan, $function->choosePlan(5, 'Basic'));
+
+                elseif ($item == 'Premium')
+                    $add_premium_ads = $db->query("INSERT INTO users_ads (user_id, ads_name, ads_description, ads_category, ads_image, ads_price, ads_location, ads_phone, ads_plan, ads_end_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $users_id, $ads_name, $ads_description, $ads_category, $ads_image, $ads_price, $ads_location, $ads_phone, $ads_plan, $function->choosePlan(7, 'Premium'));
+
+                else
+                    $add_delux_ads = $db->query("INSERT INTO users_ads (user_id, ads_name, ads_description, ads_category, ads_image, ads_price, ads_location, ads_phone, ads_plan, ads_end_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $users_id, $ads_name, $ads_description, $ads_category, $ads_image, $ads_price, $ads_location, $ads_phone, $ads_plan, $function->choosePlan(10, 'Delux'));
+            }
         }
     }
 }
