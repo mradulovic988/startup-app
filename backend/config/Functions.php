@@ -5,15 +5,9 @@
 
 class Functions
 {
-
-    public $connection;
     public $data;
     public $placeholder;
-    public $dataQuery;
     public $index;
-    public $dataPlaceholder;
-    public $placeholderIndex;
-    public $path;
 
     // Redirection
     public function redirect($location)
@@ -64,6 +58,12 @@ class Functions
             if (!empty($dataQuery[$index])) : return $dataQuery[$index]; else : return $placeholderIndex; endif;
         endif;
     }
+
+    // All plans for the ads
+//    public function choosePlan()
+//    {
+//
+//    }
 
 }
 
