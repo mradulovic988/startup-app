@@ -2,6 +2,7 @@
 /**
  * All functions which we are using in the application
  */
+require_once 'Database.php';
 
 class Functions extends Database
 {

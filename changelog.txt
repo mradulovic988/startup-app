@@ -255,7 +255,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added inheritance on Function class from the Database class
 
 ### Removed
--
+- Removed bug: Fatal error: Uncaught Error: Class 'Database' not found in C:\xampp\htdocs\app\backend\config\Functions.php:5 Stack trace: #0 C:\xampp\htdocs\app\backend\src\templates\auth\logout\logout.php(2): include() #1 {main} thrown in C:\xampp\htdocs\app\backend\config\Functions.php on line 5
 
 ### Bugs
 -
