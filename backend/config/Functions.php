@@ -82,7 +82,6 @@ class Functions extends Database
 
         foreach ($selectPlans as $plan) {
             if ($plan['ads_end_date'] === date('Y-m-d')) {
-                // add delete query here
                 $this->query('DELETE FROM users_ads WHERE ads_end_date = ?', date('Y-m-d'));
             }
         }
