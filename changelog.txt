@@ -246,3 +246,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Bugs
 -
+
+## [1.0.0] - 04.16.2020
+### Added
+- Method for deleting ads depending on their expired date
+
+### Changed
+- Added inheritance on Function class from the Database class
+
+### Removed
+-
+
+### Bugs
+-

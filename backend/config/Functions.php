@@ -3,11 +3,18 @@
  * All functions which we are using in the application
  */
 
-class Functions
+class Functions extends Database
 {
     public $data;
     public $placeholder;
     public $index;
+
+    public function __construct($dbhost = 'localhost', $dbuser = 'root', $dbpass = '', $dbname = 'app', $charset = 'utf8')
+    {
+        parent::__construct($dbhost, $dbuser, $dbpass, $dbname, $charset);
+
+        $this->adsExpired(); // Deleting expired plans depending on users plans and date
+    }
 
     // Redirection
     public function redirect($location)
@@ -66,6 +73,19 @@ class Functions
         $date = strtotime('+'.$dayDelay.' day', $timestamp);
 
         return date('Y-m-d', $date);
+    }
+
+    // Deleting expired ads depending on their plans
+    public function adsExpired()
+    {
+        $selectPlans = $this->query('SELECT user_id, ads_end_date FROM users_ads')->fetchAll();
+
+        foreach ($selectPlans as $plan) {
+            if ($plan['ads_end_date'] === date('Y-m-d')) {
+                // add delete query here
+                $this->query('DELETE FROM users_ads WHERE ads_end_date = ?', date('Y-m-d'));
+            }
+        }
     }
 
 }
