@@ -15,7 +15,7 @@
                     <li class="breadcrumb-item active">Create New Ads</li>
                 </ol>
                 <div class="card mb-4">
-                    <div class="card-body"></div>
+                    <div class="card-body">Publish your new ad</div>
                 </div>
 
                 <!-- Profile Information -->
@@ -66,35 +66,13 @@
                                                 <div class="form-group">
                                                     <select class="form-control form-control-lg bottom-border" id="ads_category" name="ads_category[]" required>
                                                         <option value="">Choose category</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
-                                                        <option value="Test">Test</option>
+                                                        <option value="Mobile Phone">Mobile Phone</option>
+                                                        <option value="Computers">Computers</option>
+                                                        <option value="House">House</option>
+                                                        <option value="Backyard">Backyard</option>
+                                                        <option value="Personal Ad">Personal Ad</option>
+                                                        <option value="Pets">Pets</option>
+                                                        <option value="Sport">Sport</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -128,6 +106,8 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <input type="hidden" name="pending_request" value="0">
 
                                         <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                             <input type="submit" class="btn btn-primary btn-lg btn-block" value="Save" name="newAdsSubmit">

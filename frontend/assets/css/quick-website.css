@@ -28020,3 +28020,8 @@ section
 img#footer-logo {
     height: 2.5rem;
 }
+
+img.img-fluid.rounded.shadow.img-fluid-custom.custom {
+    object-fit: cover;
+    height: 270px;
+}

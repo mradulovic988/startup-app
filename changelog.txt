@@ -259,3 +259,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Bugs
 -
+
+## [1.0.0] - 04.17.2020
+### Added
+- All ads page
+- Add new page
+- Excerpt method
+- Is the admin method
+- Your ads page
+- Pending request - Approve
+- Pending request - Decline
+
+### Changed
+- Not allowed for other then Admin role on some page
+- Fixed styling issue on front end images on About page
+
+### Removed
+-
+
+### Bugs
+-

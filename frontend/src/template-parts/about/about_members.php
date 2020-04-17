@@ -7,7 +7,7 @@ foreach ($aboutSelect as $about) : ?>
         <div data-animate-hover="2">
             <div class="animate-this">
                 <a href="#">
-                    <img alt="Image placeholder" class="img-fluid rounded shadow img-fluid-custom" src="<?= $function->selectQuery('../../backend/pages/assets/img/uploaded_image/', $about, 'profile_image', '../../backend/pages/assets/img/brands/avatar.png') ?>">
+                    <img alt="Image placeholder" class="img-fluid rounded shadow img-fluid-custom custom" src="<?= $function->selectQuery('../../backend/pages/assets/img/uploaded_image/', $about, 'profile_image', '../../backend/pages/assets/img/brands/avatar.png') ?>">
                 </a>
             </div>
             <div class="mt-3">

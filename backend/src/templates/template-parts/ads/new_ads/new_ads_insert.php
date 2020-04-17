@@ -14,6 +14,7 @@ if (isset ($_POST['newAdsSubmit'])) {
     $ads_category               = mysqli_real_escape_string($db->connection, print_r(implode('', $_POST['ads_category']), true));
     $ads_plan                   = mysqli_real_escape_string($db->connection, print_r(implode('', $_POST['ads_plan']), true));
     $ads_description            = mysqli_real_escape_string($db->connection, $_POST['ads_description']);
+    $pending_request            = mysqli_real_escape_string($db->connection, $_POST['pending_request']);
 
     $ads_fileNameCmps           = explode(".", $ads_image);
     $ads_fileExtension          = strtolower(end($ads_fileNameCmps));
@@ -27,20 +28,23 @@ if (isset ($_POST['newAdsSubmit'])) {
 
             $ads_plan = $_POST['ads_plan'];
 
+            /**
+             * Optimize this foreach bellow
+             */
             foreach ($ads_plan as $item) {
                 $users_id = $_SESSION['id'];
 
                 if ($item == 'Free')
-                    $add_free_ads = $db->query("INSERT INTO users_ads (user_id, ads_name, ads_description, ads_category, ads_image, ads_price, ads_location, ads_phone, ads_plan, ads_end_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $users_id, $ads_name, $ads_description, $ads_category, $ads_image, $ads_price, $ads_location, $ads_phone, $ads_plan, $function->choosePlan(3, 'Free'));
+                    $add_free_ads = $db->query("INSERT INTO users_ads (user_id, ads_name, ads_description, ads_category, ads_image, ads_price, ads_location, ads_phone, ads_plan, ads_end_date, ads_pending) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $users_id, $ads_name, $ads_description, $ads_category, $ads_image, $ads_price, $ads_location, $ads_phone, $ads_plan, $function->choosePlan(3, 'Free'), $pending_request);
 
                 elseif ($item == 'Basic')
-                    $add_basic_ads = $db->query("INSERT INTO users_ads (user_id, ads_name, ads_description, ads_category, ads_image, ads_price, ads_location, ads_phone, ads_plan, ads_end_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $users_id, $ads_name, $ads_description, $ads_category, $ads_image, $ads_price, $ads_location, $ads_phone, $ads_plan, $function->choosePlan(5, 'Basic'));
+                    $add_basic_ads = $db->query("INSERT INTO users_ads (user_id, ads_name, ads_description, ads_category, ads_image, ads_price, ads_location, ads_phone, ads_plan, ads_end_date, ads_pending) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $users_id, $ads_name, $ads_description, $ads_category, $ads_image, $ads_price, $ads_location, $ads_phone, $ads_plan, $function->choosePlan(5, 'Basic'), $pending_request);
 
                 elseif ($item == 'Premium')
-                    $add_premium_ads = $db->query("INSERT INTO users_ads (user_id, ads_name, ads_description, ads_category, ads_image, ads_price, ads_location, ads_phone, ads_plan, ads_end_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $users_id, $ads_name, $ads_description, $ads_category, $ads_image, $ads_price, $ads_location, $ads_phone, $ads_plan, $function->choosePlan(7, 'Premium'));
+                    $add_premium_ads = $db->query("INSERT INTO users_ads (user_id, ads_name, ads_description, ads_category, ads_image, ads_price, ads_location, ads_phone, ads_plan, ads_end_date, ads_pending) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $users_id, $ads_name, $ads_description, $ads_category, $ads_image, $ads_price, $ads_location, $ads_phone, $ads_plan, $function->choosePlan(7, 'Premium'), $pending_request);
 
                 else
-                    $add_delux_ads = $db->query("INSERT INTO users_ads (user_id, ads_name, ads_description, ads_category, ads_image, ads_price, ads_location, ads_phone, ads_plan, ads_end_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $users_id, $ads_name, $ads_description, $ads_category, $ads_image, $ads_price, $ads_location, $ads_phone, $ads_plan, $function->choosePlan(10, 'Delux'));
+                    $add_delux_ads = $db->query("INSERT INTO users_ads (user_id, ads_name, ads_description, ads_category, ads_image, ads_price, ads_location, ads_phone, ads_plan, ads_end_date, ads_pending) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $users_id, $ads_name, $ads_description, $ads_category, $ads_image, $ads_price, $ads_location, $ads_phone, $ads_plan, $function->choosePlan(10, 'Delux'), $pending_request);
             }
         }
     }

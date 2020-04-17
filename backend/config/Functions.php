@@ -88,6 +88,27 @@ class Functions extends Database
         }
     }
 
+    // Excerpt
+    public function getExcerpt($str, $startPos=0, $maxLength=100) {
+        if(strlen($str) > $maxLength) {
+            $excerpt   = substr($str, $startPos, $maxLength-3);
+            $lastSpace = strrpos($excerpt, ' ');
+            $excerpt   = substr($excerpt, 0, $lastSpace);
+            $excerpt  .= ' ...';
+        } else {
+            $excerpt = $str;
+        }
+
+        return $excerpt;
+    }
+
+    // If the user is admin
+    public function isAdmin()
+    {
+        if ($_SESSION['user_role'] !== 10)
+            $this->redirect('/backend/pages/index.php');
+    }
+
 }
 
 $function = new Functions();

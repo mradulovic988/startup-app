@@ -4336,6 +4336,13 @@ input[type=button].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  transition: all .3s ease;
+}
+.card.custom {
+  box-shadow: 4px 4px 9px -3px rgba(0, 0, 0, 0.3);
+}
+.card.custom:hover {
+  box-shadow: 5px 5px 9px 1px rgba(0, 0, 0, 0.3);
 }
 .card > hr {
   margin-right: 0;
@@ -10329,4 +10336,22 @@ textarea.form-control.bottom-border {
   border: 0;
   border-bottom: 1px solid;
   border-radius: 0;
+}
+
+img.card-img-top.custom-size {
+  object-fit: cover;
+  height: 280px;
+}
+
+li.list-group-item.custom {
+  padding: 7px 20px;
+}
+
+p.pending_custom {
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  color: red;
+  padding: 3px 10px;
+  font-weight: 500;
 }
