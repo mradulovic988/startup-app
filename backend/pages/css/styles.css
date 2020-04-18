@@ -10356,6 +10356,22 @@ p.pending_custom {
   font-weight: 500;
 }
 
+p.pending_custom_user {
+  z-index: 1;
+  font-size: 29px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  color: red;
+  padding: 3px 10px;
+  font-weight: 500;
+  transform: translateX(-50%);
+}
+
 p.card-text.custom {
   height: 40px;
+}
+
+.card-title.custom {
+  height: 60px;
 }

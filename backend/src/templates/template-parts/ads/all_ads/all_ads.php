@@ -12,7 +12,7 @@ $allAds = $db->query('SELECT * FROM users_ads ORDER BY id AND ads_pending = ? DE
                 <?php endif; ?>
                 <img class="card-img-top custom-size" src="../pages/assets/img/ads_uploaded_image/<?= $ad['ads_image'] ?>" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title"><?= $ad['ads_name'] ?></h5>
+                    <h5 class="card-title custom"><?= $ad['ads_name'] ?></h5>
                     <p class="card-text custom"><?= $function->getExcerpt($ad['ads_description'], '0', '50') ?></p>
                 </div>
                 <ul class="list-group list-group-flush">
