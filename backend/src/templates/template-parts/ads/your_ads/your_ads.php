@@ -7,7 +7,7 @@ $yourAds = $db->query('SELECT * FROM users_ads WHERE user_id = ? ORDER BY id DES
 <div class="row m-5">
     <?php foreach ($yourAds as $ad) : ?>
 
-    <div class="col-lg-4 mb-4">
+    <div class="col-lg-4 mb-4 content">
 
     <?php $checkPending = ($ad['ads_pending'] === 1) ?
         '<div class="card custom">' :
@@ -29,15 +29,28 @@ $yourAds = $db->query('SELECT * FROM users_ads WHERE user_id = ? ORDER BY id DES
             <li class="list-group-item custom"><b>Ad ends on:</b> <?= $ad['ads_end_date'] ?></li>
         </ul>
         <div style="display: block" class="card-body">
-            <span style="text-decoration: underline; cursor: pointer" class="card-link editBtn" data-toggle="modal" data-target="#edit_ads">Edit</span>
+            <span style="text-decoration: underline; cursor: pointer" class="card-link editBtn text-info" data-toggle="modal" data-target="#edit_ads">Edit</span>
             <input type="hidden" name="edit_id" value="<?= $ad['id'] ?>" class="edit_id">
 
-            <span style="float: right; text-decoration: underline; cursor: pointer" class="card-link declineBtn" data-toggle="modal" data-target="#decline_ads">Decline</span>
+            <span style="float: right; text-decoration: underline; cursor: pointer" class="card-link declineBtn text-info" data-toggle="modal" data-target="#decline_ads">Decline</span>
             <input type="hidden" name="decline_id" value="<?= $ad['id'] ?>" class="decline_id">
         </div>
     </div>
 </div>
 <?php endforeach; ?>
-
+</div>
+<button style="margin-bottom: 30px!important;" type="button" id="loadMore" class="btn btn-outline-primary w-25 m-0 m-auto">Load More</button>
+<script>
+    $(document).ready(function(){
+        $(".content").slice(0, 3).show();
+        $("#loadMore").on("click", function(e){
+            e.preventDefault();
+            $(".content:hidden").slice(0, 3).slideDown();
+            if($(".content:hidden").length == 0) {
+                $("#loadMore").text("No More Ads").addClass("noContent");
+            }
+        });
+    })
+</script>
 <?php include 'C:\xampp\htdocs\app\backend\src\templates\template-parts\ads\all_ads\decline\decline_ads.php'; ?>
 <?php include 'C:\xampp\htdocs\app\backend\src\templates\template-parts\ads\all_ads\edit\edit_ads_form.php'; ?>

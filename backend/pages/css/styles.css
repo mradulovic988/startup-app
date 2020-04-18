@@ -5556,6 +5556,13 @@ a.close.disabled {
     max-width: 800px;
   }
 }
+
+@media (min-width: 1440px) {
+  img.card-img-top.custom-size {
+    height: 440px!important;
+  }
+}
+
 @media (min-width: 1200px) {
   .modal-xl {
     max-width: 1140px;
@@ -10374,4 +10381,8 @@ p.card-text.custom {
 
 .card-title.custom {
   height: 60px;
+}
+
+.content {
+  display: none;
 }
