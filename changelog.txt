@@ -279,3 +279,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Bugs
 -
+
+## [1.0.0] - 04.18.2020
+### Added
+- Edit ads from admin and user
+
+### Changed
+- Some css styling
+
+### Removed
+-
+
+### Bugs
+-

@@ -24,6 +24,11 @@ if (isset ($_POST['newAdsSubmit'])) {
         $ads_uploadFileDir = '../pages/assets/img/ads_uploaded_image/';
         $ads_dest_path = $ads_uploadFileDir . $ads_image;
 
+        $maxsize    = 2097152;
+        if ($fileSize > $maxsize) {
+            die();
+        }
+
         if(move_uploaded_file($ads_fileTmpPath, $ads_dest_path)) {
 
             $ads_plan = $_POST['ads_plan'];

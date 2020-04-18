@@ -13,7 +13,7 @@ $allAds = $db->query('SELECT * FROM users_ads ORDER BY id AND ads_pending = ? DE
                 <img class="card-img-top custom-size" src="../pages/assets/img/ads_uploaded_image/<?= $ad['ads_image'] ?>" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title"><?= $ad['ads_name'] ?></h5>
-                    <p class="card-text"><?= $function->getExcerpt($ad['ads_description'], '0', '50') ?></p>
+                    <p class="card-text custom"><?= $function->getExcerpt($ad['ads_description'], '0', '50') ?></p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item custom"><b>Category:</b> <?= $ad['ads_category'] ?></li>
@@ -24,12 +24,19 @@ $allAds = $db->query('SELECT * FROM users_ads ORDER BY id AND ads_pending = ? DE
                     <li class="list-group-item custom"><b>Ad published on:</b> <?= $ad['ads_start_date'] ?></li>
                     <li class="list-group-item custom"><b>Ad ends on:</b> <?= $ad['ads_end_date'] ?></li>
                 </ul>
-                <div style="display: block" class="card-body">
-                    <span style="text-decoration: underline; cursor: pointer" class="card-link">Edit</span>
-                    <span style="float: right; text-decoration: underline; cursor: pointer" class="card-link declineBtn" data-toggle="modal" data-target="#decline_ads">Decline</span>
-                    <input type="hidden" name="decline_id" value="<?= $ad['id'] ?>" class="decline_id">
-                    <span style="float: right; text-decoration: underline; cursor: pointer" class="card-link approveBtn" data-toggle="modal" data-target="#approve_ads">Approve</span>
-                    <input type="hidden" name="approve_id" value="<?= $ad['id'] ?>" class="approve_id">
+                <div style="display: flex" class="card-body">
+                    <div class="col-sm-4">
+                        <span style="cursor:pointer;" class="card-link editBtn" data-toggle="modal" data-target="#edit_ads"><b>Edit</b></span>
+                        <input type="hidden" name="edit_id" value="<?= $ad['id'] ?>" class="edit_id">
+                    </div>
+                    <div class="col-sm-4">
+                        <span style="cursor:pointer;" class="card-link declineBtn" data-toggle="modal" data-target="#decline_ads"><b>Decline</b></span>
+                        <input type="hidden" name="decline_id" value="<?= $ad['id'] ?>" class="decline_id">
+                    </div>
+                    <div class="col-sm-4">
+                        <span style="cursor:pointer;" class="card-link approveBtn" data-toggle="modal" data-target="#approve_ads"><b>Approve</b></span>
+                        <input type="hidden" name="approve_id" value="<?= $ad['id'] ?>" class="approve_id">
+                    </div>
                 </div>
             </div>
         </div>
@@ -38,3 +45,4 @@ $allAds = $db->query('SELECT * FROM users_ads ORDER BY id AND ads_pending = ? DE
 </div>
 <?php include 'approve/approve_ads.php'; ?>
 <?php include 'decline/decline_ads.php'; ?>
+<?php include 'edit/edit_ads_form.php'; ?>

@@ -12,7 +12,7 @@ $yourAds = $db->query('SELECT * FROM users_ads WHERE user_id = ? ORDER BY id DES
                     <img class="card-img-top custom-size" src="../pages/assets/img/ads_uploaded_image/<?= $ad['ads_image'] ?>" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title"><?= $ad['ads_name'] ?></h5>
-                        <p class="card-text"><?= $function->getExcerpt($ad['ads_description'], '0', '50') ?></p>
+                        <p class="card-text custom"><?= $function->getExcerpt($ad['ads_description'], '0', '50') ?></p>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item custom"><b>Category:</b> <?= $ad['ads_category'] ?></li>
@@ -24,8 +24,11 @@ $yourAds = $db->query('SELECT * FROM users_ads WHERE user_id = ? ORDER BY id DES
                         <li class="list-group-item custom"><b>Ad ends on:</b> <?= $ad['ads_end_date'] ?></li>
                     </ul>
                     <div style="display: block" class="card-body">
-                        <span style="text-decoration: underline; cursor: pointer" class="card-link">Edit</span>
-                        <span style="float: right; text-decoration: underline; cursor: pointer" class="card-link">Delete</span>
+                        <span style="text-decoration: underline; cursor: pointer" class="card-link editBtn" data-toggle="modal" data-target="#edit_ads">Edit</span>
+                        <input type="hidden" name="edit_id" value="<?= $ad['id'] ?>" class="edit_id">
+
+                        <span style="float: right; text-decoration: underline; cursor: pointer" class="card-link declineBtn" data-toggle="modal" data-target="#decline_ads">Decline</span>
+                        <input type="hidden" name="decline_id" value="<?= $ad['id'] ?>" class="decline_id">
                     </div>
                 </div>
             </div>
@@ -33,3 +36,5 @@ $yourAds = $db->query('SELECT * FROM users_ads WHERE user_id = ? ORDER BY id DES
     <?php endforeach; ?>
 
 </div>
+<?php include 'C:\xampp\htdocs\app\backend\src\templates\template-parts\ads\all_ads\decline\decline_ads.php'; ?>
+<?php include 'C:\xampp\htdocs\app\backend\src\templates\template-parts\ads\all_ads\edit\edit_ads_form.php'; ?>

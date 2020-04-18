@@ -102,7 +102,7 @@
                                         <div class="form-row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input type="file" name="ads_image">
+                                                    <input type="file" name="ads_image" required>
                                                 </div>
                                             </div>
                                         </div>

@@ -4336,13 +4336,13 @@ input[type=button].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
-  transition: all .3s ease;
+  transition: all .2s ease;
 }
 .card.custom {
-  box-shadow: 4px 4px 9px -3px rgba(0, 0, 0, 0.3);
+  box-shadow: 7px 7px 5px -7px rgba(0, 0, 0, 0.3);
 }
 .card.custom:hover {
-  box-shadow: 5px 5px 9px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 7px 7px 12px 0 rgba(0, 0, 0, 0.5);
 }
 .card > hr {
   margin-right: 0;
@@ -10354,4 +10354,8 @@ p.pending_custom {
   color: red;
   padding: 3px 10px;
   font-weight: 500;
+}
+
+p.card-text.custom {
+  height: 40px;
 }
