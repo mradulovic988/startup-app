@@ -286,6 +286,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Edit ads from admin and user
 - Load more button on all ads and your ads
 - Pending ads counter on all ads
+- Added additional email notification for pending request for ads
 
 ### Changed
 - Some css styling

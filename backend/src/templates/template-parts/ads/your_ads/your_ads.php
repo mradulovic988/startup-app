@@ -11,7 +11,7 @@ $yourAds = $db->query('SELECT * FROM users_ads WHERE user_id = ? ORDER BY id DES
 
     <?php $checkPending = ($ad['ads_pending'] === 1) ?
         '<div class="card custom">' :
-        '<p class="pending_custom_user">PENDING</p><div style="filter: blur(7px);" class="card custom">';
+        '<p class="pending_custom_user">PENDING</p><p class="pending_notify_custom_user">Once when the ad is approved, you will be notified by email.</p><div style="filter: blur(7px);" class="card custom">';
     echo $checkPending; ?>
 
         <img class="card-img-top custom-size" src="../pages/assets/img/ads_uploaded_image/<?= $ad['ads_image'] ?>" alt="Card image cap">

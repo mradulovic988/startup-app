@@ -1,6 +1,9 @@
 <?php include '../src/templates/header/header.php'; ?>
 <?php $function->isAdmin(); ?>
-<?php $pendingNum = $db->query('SELECT ads_pending FROM users_ads WHERE ads_pending = ?', 0); ?>
+<?php
+$pendingNum = $db->query('SELECT ads_pending FROM users_ads WHERE ads_pending = ?', 0);
+$pendingNotEmpty = ($pendingNum->numRows() !== 0) ? 'You have ' . $pendingNum->numRows() . ' pending ads.' : NULL;
+?>
 <div id="layoutSidenav">
     <div id="layoutSidenav_nav">
         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
@@ -18,7 +21,7 @@
                 </ol>
                 <div class="card mb-4">
                     <div class="card-body">Check all ads</div>
-                    <p class="ml-4"><strong>You have <?= $pendingNum->numRows(); ?> pending Ads.</strong></p>
+                    <p class="ml-3"><strong><?= $pendingNotEmpty ?></strong></p>
                 </div>
                 <div class="card mb-4">
                     <?php include '../src/templates/template-parts/ads/all_ads/all_ads.php'; ?>
