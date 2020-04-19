@@ -18,5 +18,5 @@ if (isset($_POST['editProfile'])) {
     $email  = $_POST['email'];
 
     $profileEdit = $db->query('UPDATE users SET fname = ?, lname = ?, email = ? WHERE id = ?', $fname, $lname, $email, $_SESSION['id']);
-
+    $function->redirect($_SERVER['REQUEST_URI']);
 }

@@ -1,6 +1,4 @@
-<?php
-$allAds = $db->query('SELECT * FROM users_ads ORDER BY id AND ads_pending = ? DESC', 0)->fetchAll();
-?>
+<?php $allAds = $db->query('SELECT * FROM users_ads ORDER BY id AND ads_pending = ? DESC', 0)->fetchAll(); ?>
 
 <div class="row m-5">
     <?php foreach ($allAds as $ad) : ?>

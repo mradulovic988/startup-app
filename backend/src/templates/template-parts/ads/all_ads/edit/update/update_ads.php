@@ -56,4 +56,5 @@ if (isset ($_POST['editAdsSubmit'])) {
             }
         }
     }
+    $function->redirect($_SERVER['REQUEST_URI']);
 }

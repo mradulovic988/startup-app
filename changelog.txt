@@ -287,12 +287,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Load more button on all ads and your ads
 - Pending ads counter on all ads
 - Added additional email notification for pending request for ads
+- Fixed refresh issue after all queries
 
 ### Changed
 - Some css styling
 
 ### Removed
--
+- Membership end row in All user section - Not relevated for the user information
 
 ### Bugs
 -

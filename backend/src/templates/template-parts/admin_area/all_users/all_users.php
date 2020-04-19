@@ -4,8 +4,7 @@
             <th>Full Name</th>
             <th>Username</th>
             <th>Email</th>
-            <th>Membership Start</th>
-            <th>Membership End</th>
+            <th>Member Since</th>
             <th>User role</th>
             <th>Upgrade role</th>
             <th>Delete</th>
@@ -16,8 +15,7 @@
             <th>Full Name</th>
             <th>Username</th>
             <th>Email</th>
-            <th>Membership Start</th>
-            <th>Membership End</th>
+            <th>Member Since</th>
             <th>User role</th>
             <th>Upgrade role</th>
             <th>Delete</th>
@@ -27,13 +25,19 @@
 	<?php
 	$allUsers = $db->query('SELECT id, fname, lname, username, email, date, user_role FROM users ORDER BY id DESC')->fetchAll();
 
+    /**
+     * SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+    FROM Orders
+    INNER JOIN Customers
+    ON Orders.CustomerID=Customers.CustomerID;
+     */
+
 	foreach ($allUsers as $allUser) { ?>
 		<tr>
 			<td><?= $allUser['fname'] . ' ' . $allUser['lname'] ?></td>
 			<td><?= $allUser['username'] ?></td>
 			<td><?= $allUser['email'] ?></td>
 			<td><?= $allUser['date'] ?></td>
-			<td>Membership End</td>
 			<td><?= ($allUser['user_role'] === 10) ? 'Admin' : 'Customer'; ?></td>
 			<td>
                 <a href="#" data-toggle="modal" class="upgradeBtn" data-target="#upgradeUserRole">Upgrade</a>

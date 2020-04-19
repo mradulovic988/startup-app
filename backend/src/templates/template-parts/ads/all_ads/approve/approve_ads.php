@@ -28,9 +28,11 @@
         $("#dbApproveId").val(approveId);
     });
 </script>
+
 <?php
 if (isset($_POST['approveAd'])) {
     $dbApproveId = $_POST['dbApproveId'];
     $approve = $db->query('UPDATE users_ads SET ads_pending = ? WHERE id = ?', '1', $dbApproveId);
+    $function->redirect($_SERVER['REQUEST_URI']);
 }
 ?>

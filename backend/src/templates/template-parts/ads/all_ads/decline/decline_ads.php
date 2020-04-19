@@ -32,5 +32,6 @@
 if (isset($_POST['declineAd'])) {
     $dbDeclineId = $_POST['dbDeclineId'];
     $declineAd = $db->query('DELETE FROM users_ads WHERE id = ?', $dbDeclineId);
+    $function->redirect($_SERVER['REQUEST_URI']);
 }
 ?>
