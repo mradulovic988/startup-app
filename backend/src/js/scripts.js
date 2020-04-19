@@ -15,3 +15,5 @@
         $("body").toggleClass("sb-sidenav-toggled");
     });
 })(jQuery);
+
+console.log ('work ');

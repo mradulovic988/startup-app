@@ -26,7 +26,6 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8 mb-5">
                                 <div class="border-0 rounded-lg mt-5">
-
                                     <form class="md-form" method="post" enctype="multipart/form-data">
 
                                         <div class="form-row">
@@ -94,7 +93,7 @@
                                         <div class="form-row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <textarea class="form-control bottom-border" name="ads_description" rows="7" placeholder="Add description..." required></textarea>
+                                                    <textarea class="form-control bottom-border" id="ads_description" name="ads_description" rows="7" placeholder="Add description..." required></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -102,15 +101,17 @@
                                         <div class="form-row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input type="file" name="ads_image" required>
+                                                    <input type="file" id="ads_image" name="ads_image" required>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <input type="hidden" name="pending_request" value="0">
+                                        <input type="hidden" id="pending_request" name="pending_request" value="0">
 
                                         <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <input type="submit" class="btn btn-primary btn-lg btn-block" value="Save" name="newAdsSubmit">
+<!--                                            <input type="submit" onclick="sendContact();" class="btn btn-primary btn-lg btn-block" value="Save" id="newAdsSubmit" name="newAdsSubmit">-->
+
+                                            <button type="submit" class="btn btn-primary btn-lg btn-block" id="newAdsSubmit" name="newAdsSubmit">Save</button>
                                         </div>
                                     </form>
                                     <?php include '../src/templates/template-parts/ads/new_ads/new_ads_insert.php'; ?>
