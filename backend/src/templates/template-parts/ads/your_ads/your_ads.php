@@ -35,6 +35,11 @@ $yourAds = $db->query('SELECT * FROM users_ads WHERE user_id = ? ORDER BY id DES
             <span style="float: right; text-decoration: underline; cursor: pointer" class="card-link declineBtn text-info" data-toggle="modal" data-target="#decline_ads">Decline</span>
             <input type="hidden" name="decline_id" value="<?= $ad['id'] ?>" class="decline_id">
         </div>
+        <div style="display: block" class="card-body">
+            <a href="/frontend/single_ads.php?id=<?= $ad['id']; ?>" target="_blank">
+                <button type="button" class="btn btn-outline-primary w-100">View Live</button>
+            </a>
+        </div>
     </div>
 </div>
 <?php endforeach; ?>

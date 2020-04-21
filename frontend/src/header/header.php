@@ -66,6 +66,7 @@
     <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
     <!-- Quick CSS -->
     <link rel="stylesheet" href="assets/css/quick-website.css" id="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -112,6 +113,9 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mt-4 mt-lg-0 ml-auto">
 
+                <li class="nav-item ">
+                    <a href="index.php" class="nav-link">Home</a>
+                </li>
                 <li class="nav-item ">
                     <a href="about.php" class="nav-link">About us</a>
                 </li>

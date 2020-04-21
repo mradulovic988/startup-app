@@ -37,6 +37,11 @@
                         <input type="hidden" name="approve_id" value="<?= $ad['id'] ?>" class="approve_id">
                     </div>
                 </div>
+                <div style="display: block" class="card-body">
+                    <a href="/frontend/single_ads.php?id=<?= $ad['id']; ?>" target="_blank">
+                        <button type="button" class="btn btn-outline-primary w-100">View Live</button>
+                    </a>
+                </div>
             </div>
         </div>
 

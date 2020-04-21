@@ -6071,6 +6071,7 @@ input[type='button'].btn-block
 .card-title
 {
     margin-bottom: 1.25rem;
+    height: 70px;
 }
 
 .card-subtitle
@@ -6082,6 +6083,10 @@ input[type='button'].btn-block
 .card-text:last-child
 {
     margin-bottom: 0;
+}
+
+p.card-text {
+    height: 90px;
 }
 
 .card-link:hover
@@ -28024,4 +28029,24 @@ img#footer-logo {
 img.img-fluid.rounded.shadow.img-fluid-custom.custom {
     object-fit: cover;
     height: 270px;
+}
+
+img.card-img-top {
+    object-fit: contain;
+    height: 290px;
+}
+
+.content {
+    display: none;
+}
+
+button#loadMore {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+span.phone_change {
+    color: #008aff;
+    cursor: pointer;
 }
