@@ -1,4 +1,7 @@
-<?php $allAds = $db->query('SELECT * FROM users_ads ORDER BY id AND ads_pending = ? DESC', 0)->fetchAll(); ?>
+<?php
+$allAds = $db->query('SELECT * FROM users_ads ORDER BY id AND ads_pending = ? DESC', 0)->fetchAll();
+//$allAds = $db->query('SELECT * FROM users_ads INNER JOIN users ON users_ads.user_id = users.id ORDER BY users_ads.id AND users_ads.ads_pending = ? DESC', 0)->fetchAll();
+?>
 
 <div class="row m-5">
     <?php foreach ($allAds as $ad) : ?>
@@ -22,6 +25,7 @@
                     <li class="list-group-item custom"><b>Plan:</b> <?= $ad['ads_plan'] ?></li>
                     <li class="list-group-item custom"><b>Ad published on:</b> <?= $ad['ads_start_date'] ?></li>
                     <li class="list-group-item custom"><b>Ad ends on:</b> <?= $ad['ads_end_date'] ?></li>
+<!--                    <li class="list-group-item custom"><b>Email:</b> --><?//= $ad['email'] ?><!--</li>-->
                 </ul>
                 <div style="display: flex" class="card-body">
                     <div class="col-sm-4">

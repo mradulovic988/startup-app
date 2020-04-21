@@ -1,6 +1,8 @@
 <?php
 $session_id = $_SESSION['id'];
 $yourAds = $db->query('SELECT * FROM users_ads WHERE user_id = ? ORDER BY id DESC', $session_id)->fetchAll();
+//$yourAds = $db->query('SELECT * FROM users_ads INNER JOIN users ON users_ads.user_id = users.id WHERE users_ads.user_id = ? ORDER BY users_ads.id DESC', $session_id)->fetchAll();
+
 
 ?>
 
@@ -27,6 +29,7 @@ $yourAds = $db->query('SELECT * FROM users_ads WHERE user_id = ? ORDER BY id DES
             <li class="list-group-item custom"><b>Plan:</b> <?= $ad['ads_plan'] ?></li>
             <li class="list-group-item custom"><b>Ad published on:</b> <?= $ad['ads_start_date'] ?></li>
             <li class="list-group-item custom"><b>Ad ends on:</b> <?= $ad['ads_end_date'] ?></li>
+<!--            <li class="list-group-item custom"><b>Email:</b> --><?//= $ad['email'] ?><!--</li>-->
         </ul>
         <div style="display: block" class="card-body">
             <span style="text-decoration: underline; cursor: pointer" class="card-link editBtn text-info" data-toggle="modal" data-target="#edit_ads">Edit</span>

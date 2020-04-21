@@ -1,4 +1,6 @@
-<?php $allAds = $db->query('SELECT * FROM users_ads WHERE ads_pending = ? ORDER BY id DESC', 1)->fetchAll(); ?>
+<?php $allAds = $db->query('SELECT * FROM users_ads WHERE ads_pending = ? ORDER BY id DESC', 1)->fetchAll();
+//$allAds = $db->query('SELECT * FROM users_ads INNER JOIN users ON users_ads.user_id = users.id WHERE users_ads.ads_pending = ? ORDER BY users_ads.id DESC', 1)->fetchAll();
+?>
 
 <div class="row mt-4">
     <?php foreach ($allAds as $ad) { ?>
@@ -20,6 +22,7 @@
                     <div class="row">
                         <div class="col-md-6"><small><strong>Phone: </strong><?= $ad['ads_phone'] ?></small></div>
                         <div class="col-md-6"><small><strong>Plan: </strong><?= $ad['ads_plan'] ?></small></div>
+<!--                        <div class="col-md-6"><small><strong>Email: </strong>--><?//= $ad['email'] ?><!--</small></div>-->
                     </div>
                 </div>
                 <div class="card-footer">

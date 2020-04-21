@@ -304,9 +304,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Single ad
 - View live button on the backend lead to the single ad on the frontend
 - Redesigned sidebar
+- Deleting profile photo when the user is deleted
+- Deleting ads image when the ad is deleted
+- Only admin user role can see the pending ads live
+- Contact section on the single ads page
 
 ### Changed
--
+- Structure of single ads. Moved to the src/template-parts/home/ads/
 
 ### Removed
 -

@@ -79,11 +79,13 @@ class Functions extends Database
     // Deleting expired ads depending on their plans
     public function adsExpired()
     {
-        $selectPlans = $this->query('SELECT user_id, ads_end_date FROM users_ads')->fetchAll();
+        $selectPlans = $this->query('SELECT user_id, ads_image, ads_end_date FROM users_ads')->fetchAll();
 
         foreach ($selectPlans as $plan) {
             if ($plan['ads_end_date'] === date('Y-m-d')) {
                 $this->query('DELETE FROM users_ads WHERE ads_end_date = ?', date('Y-m-d'));
+
+                unlink('../pages/assets/img/ads_uploaded_image/'.$plan['ads_image']);
             }
         }
     }
