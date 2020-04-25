@@ -6058,6 +6058,8 @@ input[type='button'].btn-block
     border-bottom-left-radius: .75rem;
 }
 
+/*
+If anything broke uncomment this and comment this below
 .card-body
 {
     min-height: 1px;
@@ -6066,12 +6068,22 @@ input[type='button'].btn-block
     color: #718096; 
 
     flex: 1 1 auto;
+
+
+}
+*/
+.card-body {
+    min-height: 1px;
+    padding: 20px 10px;
+    color: #718096;
+    font-size: 14px;
+    flex: 1 1 auto;
 }
 
 .card-title
 {
     margin-bottom: 1.25rem;
-    height: 70px;
+    height: 40px;
 }
 
 .card-subtitle
@@ -6086,7 +6098,7 @@ input[type='button'].btn-block
 }
 
 p.card-text {
-    height: 90px;
+    height: 60px;
 }
 
 .card-link:hover
@@ -28033,7 +28045,7 @@ img.img-fluid.rounded.shadow.img-fluid-custom.custom {
 
 img.card-img-top {
     object-fit: contain;
-    height: 290px;
+    height: 230px;
 }
 
 .content {
@@ -28049,4 +28061,28 @@ button#loadMore {
 span.phone_change {
     color: #008aff;
     cursor: pointer;
+}
+
+h4.card-title {
+    font-size: 16px;
+}
+
+h5.custom-price {
+    font-size: 14px;
+}
+
+p.card-text {
+    height: 90px;
+    font-size: 12px;
+}
+
+.card {
+    position: relative;
+    margin-bottom: 0!important;
+    box-shadow: 0 0 1.25rem rgba(31, 45, 61, .05);
+}
+
+tr.single-user-tr > th {
+    font-size: 14px;
+    font-weight: 900;
 }

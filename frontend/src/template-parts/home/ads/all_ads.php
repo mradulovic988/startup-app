@@ -4,14 +4,14 @@
 
 <div class="row mt-4">
     <?php foreach ($allAds as $ad) { ?>
-        <div class="col-lg-3 col-md-6 mb-4 content">
+        <div class="col-md-3 mb-4 content">
             <div class="card h-100">
                 <a href="single_ads.php?id=<?= $ad['id']; ?>"><img class="card-img-top" src="../backend/pages/assets/img/ads_uploaded_image/<?= $ad['ads_image'] ?>" alt=""></a>
                 <div class="card-body">
                     <h4 class="card-title">
                         <a href="single_ads.php?id=<?= $ad['id']; ?>"><?= $function->getExcerpt($ad['ads_name'], '0', '40') ?></a>
                     </h4>
-                    <h5>Price: <?= $ad['ads_price'] ?></h5>
+                    <h5 class="custom-price">Price: <?= $ad['ads_price'] ?></h5>
                     <p class="card-text"><?= $function->getExcerpt($ad['ads_description'], '0', '100') ?></p>
 
                     <div class="row">

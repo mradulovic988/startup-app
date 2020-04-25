@@ -125,10 +125,10 @@
 
                 <?php if (empty($_SESSION['username'])) : ?>
                     <li class="nav-item d-lg-none">
-                        <a href="../backend/pages/login.php" class="nav-link">Login</a>
+                        <a href="../backend/pages/login.php" class="nav-link">Sign In</a>
                     </li>
                     <li class="nav-item d-lg-none">
-                        <a href="../backend/pages/register.php" class="nav-link">Go Pro</a>
+                        <a href="../backend/pages/register.php" class="nav-link">Sign Up</a>
                     </li>
                 <?php else : ?>
                     <li class="nav-item d-lg-none">
@@ -144,11 +144,11 @@
 
                 <?php if (empty($_SESSION['username'])) : ?>
                     <a class="navbar-btn btn btn-sm btn-primary d-none d-lg-inline-block ml-3" href="../backend/pages/login.php">
-                        Login
+                        Sign In
                     </a>
 
                     <a class="navbar-btn btn btn-sm btn-warning d-none d-lg-inline-block" href="../backend/pages/register.php">
-                        Go PRO
+                        Sign Up
                     </a>
                 <?php else : ?>
                     <a class="navbar-btn btn btn-sm btn-primary d-lg-inline-block ml-3" href="../backend/pages/index.php">

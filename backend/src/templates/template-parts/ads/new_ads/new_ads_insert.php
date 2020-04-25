@@ -10,10 +10,10 @@ if (isset ($_POST['newAdsSubmit'])) {
     $ads_name                   = mysqli_real_escape_string($db->connection, $_POST['ads_name']);
     $ads_phone                  = mysqli_real_escape_string($db->connection, $_POST['ads_phone']);
     $ads_price                  = mysqli_real_escape_string($db->connection, $_POST['ads_price']);
-    $ads_location               = mysqli_real_escape_string($db->connection, $_POST['ads_location']);
+    $ads_location               = mysqli_real_escape_string($db->connection, print_r(implode('', $_POST['ads_location']), true));
     $ads_category               = mysqli_real_escape_string($db->connection, print_r(implode('', $_POST['ads_category']), true));
     $ads_plan                   = mysqli_real_escape_string($db->connection, print_r(implode('', $_POST['ads_plan']), true));
-    $ads_description            = mysqli_real_escape_string($db->connection, $_POST['ads_description']);
+    $ads_description            = nl2br($_POST['ads_description']);
     $pending_request            = mysqli_real_escape_string($db->connection, $_POST['pending_request']);
 
     $ads_fileNameCmps           = explode(".", $ads_image);

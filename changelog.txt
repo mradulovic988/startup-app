@@ -308,6 +308,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Deleting ads image when the ad is deleted
 - Only admin user role can see the pending ads live
 - Contact section on the single ads page
+- Single user profile static content
 
 ### Changed
 - Structure of single ads. Moved to the src/template-parts/home/ads/
@@ -317,3 +318,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Bugs
 -
+
+## [1.0.0] - 04.24.2020
+### Added
+-
+
+### Changed
+-
+
+### Removed
+-
+
+### Bugs
+- Warning: unlink(../pages/assets/img/ads_uploaded_image/930a7c36-96aa-492c-a09d-0ee09b3662f6_1.2abb3e692c0ea4772f27ef6695c626d4.jpeg): No such file or directory in C:\xampp\htdocs\app\backend\config\Functions.php on line 88
+
+## [1.0.0] - 04.26.2020
+### Added
+- Single user page
+- All ads from specific user on single user page
+- Added more ads
+- Added more categories
+- Added all cities in Serbia for new ad
+- Added Load more button to single users ads table
+
+### Changed
+-
+
+### Removed
+-
+
+### Bugs
+- Warning: unlink(../pages/assets/img/ads_uploaded_image/930a7c36-96aa-492c-a09d-0ee09b3662f6_1.2abb3e692c0ea4772f27ef6695c626d4.jpeg): No such file or directory in C:\xampp\htdocs\app\backend\config\Functions.php on line 88

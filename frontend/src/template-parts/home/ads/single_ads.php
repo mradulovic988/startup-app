@@ -1,9 +1,11 @@
 <?php
+
 if (isset($_GET['id'])) {
     $single_ads = $_GET['id'];
 }
 
 $singleAds = $db->query('SELECT * FROM users_ads WHERE id = ?', $single_ads)->fetchArray();
+
 //$singleAds = $db->query('SELECT * FROM users_ads INNER JOIN users ON users_ads.user_id = users.id WHERE users_ads.id = ?', $single_ads)->fetchArray(); ?>
 
 <?php
@@ -27,7 +29,11 @@ if ($singleAds['ads_pending'] === 0 && $_SESSION['user_role'] !== 10) $function-
         <div class="row">
             <div class="col-md-6"><strong>Phone: </strong><span class="phone_change">See number</span></div>
             <div class="col-md-6"><strong>Plan: </strong><?= $singleAds['ads_plan'] ?></div>
-<!--            <div class="col-md-6"><strong>Email: </strong>--><?//= $singleAds['email'] ?><!--</div>-->
+<!--            <div class="col-md-6"><strong>Email: </strong>--><?//= $singleAdstest['email'] ?><!--</div>-->
+        </div>
+
+        <div class="row">
+            <div class="col-md-6"><strong><a href="http://app.beta/frontend/single_user_profile.php?user_id=<?= $singleAds['user_id'] ?>">More from this user</a></strong></div>
         </div>
     </div>
 </div>
